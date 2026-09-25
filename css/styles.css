@@ -1,0 +1,31 @@
+/*======================= all universal css ================= */
+:root {
+        --primary-mint: #0ceab3;
+        --primary-mint-hover: #2f9b80;
+        --primary-mint-light: #ebf8f4;
+        --primary-mint-tint: #d6f2e8;
+        --primary-mint-bg: #f4fbf8;
+        --accent-coral: #ff6e65;
+        --accent-coral-hover: #f25c53;
+        --accent-coral-light: #fff0ef;
+        --text-dark: #1e293b;
+        --text-slate: #475569;
+        --text-muted: #64748b;
+        --bg-white: #ffffff;
+        --bg-page: #fafdfb;
+        --card-border: #e6f3ef;
+        --card-shadow:
+          0 12px 32px -4px rgba(46, 160, 131, 0.08),
+          0 4px 12px -2px rgba(0, 0, 0, 0.03);
+        --card-shadow-hover:
+          0 20px 40px -4px rgba(46, 160, 131, 0.15),
+          0 8px 16px -2px rgba(0, 0, 0, 0.04);
+        --radius-sm: 8px;
+        --radius-md: 16px;
+        --radius-lg: 24px;
+        --radius-full: 9999px;
+        --font-body: "Caveat", cursive, sans-serif;
+        --font-doodle: "Caveat", cursive;
+        --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+

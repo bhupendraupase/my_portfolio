@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selected Work & Case Studies — Bhupendra Upase | Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Caveat for handwritten notes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       1. HEADER & NAVIGATION
+       ========================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+
+      <button class="btn btn-primary" onclick="openContactModal()">
+        Let's Talk <span style="font-size:1.1em">✨</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       2. WORK HERO & FILTER BAR
+       ========================================================== -->
+  <section class="work-hero">
+    <div class="container">
+      <span class="hero-sparkle">Selected Portfolio ♡</span>
+      <h1>Handcrafted case studies that drove <span>real impact</span></h1>
+      <p>A curated collection of mobile apps, digital commerce, and complex SaaS products built with empathy, aesthetics, and measurable conversion gains.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">
+          All Projects <span class="count">6</span>
+        </button>
+        <button class="filter-btn" onclick="filterProjects('mobile', this)">
+          📱 Mobile Apps <span class="count">3</span>
+        </button>
+        <button class="filter-btn" onclick="filterProjects('web', this)">
+          💻 Web & SaaS <span class="count">2</span>
+        </button>
+        <button class="filter-btn" onclick="filterProjects('fintech', this)">
+          💳 Fintech <span class="count">1</span>
+        </button>
+        <button class="filter-btn" onclick="filterProjects('ecommerce', this)">
+          🛍️ E-Commerce <span class="count">1</span>
+        </button>
+        <button class="filter-btn" onclick="filterProjects('system', this)">
+          🧩 Design Systems <span class="count">1</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. CASE STUDIES GRID (Includes FinTrack, Shopzy, Healthi)
+       ========================================================== */
+  ========================================================== -->
+  <section class="work-grid-section">
+    <div class="container">
+      <div class="projects-grid" id="projectsContainer">
+
+        <!-- 1. FINTRACK (From Reference Image) -->
+        <article class="project-card" data-category="mobile fintech">
+          <div class="project-mockup-wrapper theme-fintrack" onclick="openCaseStudy('fintrack')">
+            <div class="phone-mockup-pair">
+              <div class="mini-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-card-preview">
+                  <span>Balance</span>
+                  <div style="font-size:8px; font-weight:800; margin-top:2px;">$14,850.00</div>
+                </div>
+                <div class="phone-lines">
+                  <div class="p-line" style="width:70%; background:var(--primary);"></div>
+                  <div class="p-line" style="width:90%;"></div>
+                  <div class="p-line" style="width:60%;"></div>
+                  <div class="p-line" style="width:80%;"></div>
+                </div>
+              </div>
+              <div class="mini-phone" style="transform:translateY(14px);">
+                <div class="phone-notch"></div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <span style="font-size:6px; font-weight:700;">Monthly Stats</span>
+                  <span style="font-size:6px; color:var(--primary);">+18.4%</span>
+                </div>
+                <div style="height:48px; background:#E3F4ED; border-radius:4px; display:flex; align-items:flex-end; gap:3px; padding:3px;">
+                  <div style="flex:1; height:40%; background:var(--primary); border-radius:2px;"></div>
+                  <div style="flex:1; height:70%; background:var(--primary); border-radius:2px;"></div>
+                  <div style="flex:1; height:90%; background:var(--coral); border-radius:2px;"></div>
+                  <div style="flex:1; height:60%; background:var(--primary); border-radius:2px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Mobile App Design</span>
+              <span class="impact-pill">+68% Retention</span>
+            </div>
+            <h3 class="project-title">FinTrack — Finance App</h3>
+            <p class="project-desc">
+              A personal finance & investment tracker designed to simplify budgeting, daily expense tracking, and recurring savings goals for millennials.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">iOS / Android</span>
+              <span class="tag-chip">Fintech</span>
+              <span class="tag-chip">Design System</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('fintrack')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. SHOPZY (From Reference Image) -->
+        <article class="project-card coral-cat" data-category="web ecommerce">
+          <div class="project-mockup-wrapper theme-shopzy" onclick="openCaseStudy('shopzy')">
+            <div class="mini-browser">
+              <div class="browser-top">
+                <div class="b-dot red"></div>
+                <div class="b-dot yellow"></div>
+                <div class="b-dot green"></div>
+                <div style="font-size:7px; color:#9CA3AF; margin-left:6px;">shopzy.store/summer-edit</div>
+              </div>
+              <div class="browser-hero-fashion">
+                <div class="fashion-pic">👗</div>
+                <div class="fashion-info">
+                  <span style="font-size:6px; font-weight:800; color:var(--coral);">SUMMER '26</span>
+                  <div class="p-line" style="width:80%; background:#111827;"></div>
+                  <div class="p-line" style="width:50%;"></div>
+                  <div style="width:40px; height:10px; background:var(--coral); border-radius:3px; margin-top:4px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Web Design</span>
+              <span class="impact-pill">+41% Checkout Rate</span>
+            </div>
+            <h3 class="project-title">Shopzy — E-Commerce</h3>
+            <p class="project-desc">
+              A clean & modern responsive e-commerce web platform designed for contemporary fashion lovers with 1-click checkout and editorial collections.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">Web Architecture</span>
+              <span class="tag-chip">E-Commerce</span>
+              <span class="tag-chip">Design Tokens</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('shopzy')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. HEALTHI (From Reference Image) -->
+        <article class="project-card purple-cat" data-category="mobile">
+          <div class="project-mockup-wrapper theme-healthi" onclick="openCaseStudy('healthi')">
+            <div class="phone-mockup-pair">
+              <div class="mini-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-card-preview purple">
+                  <span>Daily Goal</span>
+                  <div style="font-size:8px; font-weight:800; margin-top:2px;">🔥 14-Day Streak</div>
+                </div>
+                <div class="phone-lines">
+                  <div class="p-line" style="width:100%; background:#8B5CF6;"></div>
+                  <div class="p-line" style="width:75%;"></div>
+                  <div class="p-line" style="width:60%;"></div>
+                </div>
+              </div>
+              <div class="mini-phone" style="transform:translateY(14px);">
+                <div class="phone-notch"></div>
+                <div style="font-size:6px; font-weight:700; margin-bottom:4px;">Mindful Habits</div>
+                <div style="background:#EDE9FE; border-radius:4px; padding:4px; margin-bottom:4px; font-size:6px;">
+                  💧 2.5L Hydration
+                </div>
+                <div style="background:#EDE9FE; border-radius:4px; padding:4px; font-size:6px;">
+                  🧘 15m Meditation
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Mobile App Design</span>
+              <span class="impact-pill">4.9 ★ (120k Users)</span>
+            </div>
+            <h3 class="project-title">Healthi — Wellness App</h3>
+            <p class="project-desc">
+              A holistic wellness & habit companion that combines positive behavioral psychology, gamification, and calm micro-interactions.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">Habit Tracking</span>
+              <span class="tag-chip">Gamification</span>
+              <span class="tag-chip">Mobile iOS</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('healthi')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. NOVALYTICS (SaaS Cloud Analytics) -->
+        <article class="project-card" data-category="web">
+          <div class="project-mockup-wrapper theme-saas" onclick="openCaseStudy('novalytics')">
+            <div class="mini-browser">
+              <div class="browser-top">
+                <div class="b-dot red"></div>
+                <div class="b-dot yellow"></div>
+                <div class="b-dot green"></div>
+                <div style="font-size:7px; color:#9CA3AF; margin-left:6px;">app.novalytics.io</div>
+              </div>
+              <div style="padding:10px; display:flex; gap:8px; height:100%;">
+                <div style="width:40px; background:#F0F9FF; border-radius:4px; display:flex; flex-direction:column; gap:4px; padding:4px;">
+                  <div style="height:5px; background:#0284C7; border-radius:2px;"></div>
+                  <div style="height:5px; background:#BAE6FD; border-radius:2px;"></div>
+                  <div style="height:5px; background:#BAE6FD; border-radius:2px;"></div>
+                </div>
+                <div style="flex:1; display:flex; flex-direction:column; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="font-size:7px; font-weight:800;">Realtime ARR</span>
+                    <span style="font-size:7px; color:#0284C7;">$2.4M</span>
+                  </div>
+                  <div style="height:55px; background:#F8FAFC; border-radius:4px; border:1px dashed #CBD5E1;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">SaaS Platform</span>
+              <span class="impact-pill">-52% Setup Time</span>
+            </div>
+            <h3 class="project-title">Novalytics — B2B Cloud Hub</h3>
+            <p class="project-desc">
+              Simplifying dense telemetry data and distributed cloud infrastructure metrics into human-readable visual dashboards for engineering leads.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">Data Visualization</span>
+              <span class="tag-chip">B2B SaaS</span>
+              <span class="tag-chip">Complex Systems</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('novalytics')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. BLOOM BOTANICS (Mobile Lifestyle App) -->
+        <article class="project-card" data-category="mobile">
+          <div class="project-mockup-wrapper theme-botanical" onclick="openCaseStudy('bloom')">
+            <div class="phone-mockup-pair">
+              <div class="mini-phone">
+                <div class="phone-notch"></div>
+                <div style="background:#059669; border-radius:6px; height:50px; display:flex; align-items:center; justify-content:center; font-size:18px;">
+                  🪴
+                </div>
+                <div style="margin-top:6px;">
+                  <span style="font-size:6px; font-weight:800; color:#065F46;">Monstera Deliciosa</span>
+                  <div class="p-line" style="width:70%; margin-top:2px;"></div>
+                </div>
+              </div>
+              <div class="mini-phone" style="transform:translateY(14px);">
+                <div class="phone-notch"></div>
+                <div style="font-size:6px; font-weight:700;">Watering Schedule</div>
+                <div style="height:36px; background:#D1FAE5; border-radius:4px; margin-top:4px; padding:3px; font-size:6px;">
+                  💧 In 2 days
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Mobile App Design</span>
+              <span class="impact-pill">App of the Day 🏆</span>
+            </div>
+            <h3 class="project-title">Bloom — Smart Plant Care</h3>
+            <p class="project-desc">
+              An interactive plant identification, watering schedule, and indoor botanical care companion built with soft pastel vibes and AI light sensors.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">Computer Vision</span>
+              <span class="tag-chip">Kawaii UI</span>
+              <span class="tag-chip">Mobile iOS</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('bloom')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. AURA DESIGN SYSTEM (Design Tokens & UI Kit) -->
+        <article class="project-card" data-category="system">
+          <div class="project-mockup-wrapper theme-system" onclick="openCaseStudy('aura')">
+            <div style="background:#FFFFFF; border-radius:12px; padding:12px; width:220px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+              <div style="font-size:7px; font-weight:800; color:#B45309; margin-bottom:6px;">AURA UI SYSTEM v2.4</div>
+              <div style="display:flex; gap:4px; margin-bottom:8px;">
+                <div style="width:14px; height:14px; background:#38B294; border-radius:3px;"></div>
+                <div style="width:14px; height:14px; background:#FF6E65; border-radius:3px;"></div>
+                <div style="width:14px; height:14px; background:#F59E0B; border-radius:3px;"></div>
+                <div style="width:14px; height:14px; background:#8B5CF6; border-radius:3px;"></div>
+              </div>
+             <div style="display:flex; gap:4px;">
+                <div style="padding:3px 8px; background:var(--primary); color:#FFF; font-size:6px; border-radius:10px; font-weight:700;">Button / Solid</div>
+                <div style="padding:3px 8px; border:1px solid #D1D5DB; font-size:6px; border-radius:10px;">Button / Ghost</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-meta-row">
+              <span class="project-category">Design System</span>
+              <span class="impact-pill">3.5x Dev Velocity</span>
+            </div>
+            <h3 class="project-title">Aura — Multi-Brand UI Kit</h3>
+            <p class="project-desc">
+              A comprehensive Figma variable-driven token architecture and WCAG AA-accessible component system powering 5 enterprise client platforms.
+            </p>
+            <div class="project-tags">
+              <span class="tag-chip">Figma Variables</span>
+              <span class="tag-chip">React Specs</span>
+              <span class="tag-chip">Accessibility</span>
+            </div>
+            <a href="javascript:void(0)" onclick="openCaseStudy('aura')" class="project-link-btn">
+              View Case Study →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. CLIENT IMPACT / NUMBERS BANNER
+       ========================================================== -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-card-bar">
+        <div class="metric-col">
+          <h4>$45M+</h4>
+          <p>Client Funding Raised Post-Redesign</p>
+        </div>
+        <div class="metric-col">
+          <h4>2M+</h4>
+          <p>Daily Active End Users Across Apps</p>
+        </div>
+        <div class="metric-col">
+          <h4>34%</h4>
+          <p>Average Increase in Onboarding Funnels</p>
+        </div>
+        <div class="metric-col">
+          <h4>100%</h4>
+          <p>Developer-Validated Figma Components</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       5. DESIGN PROCESS RECAP RIBBON
+       ========================================================== -->
+  <section class="process-ribbon">
+    <div class="container ribbon-flex">
+      <div class="ribbon-heading">
+        Every project follows a proven 6-step human-centered cycle:
+      </div>
+      <div class="ribbon-steps">
+        <div class="ribbon-step-pill"><span>01</span> Empathize</div>
+        <div class="ribbon-step-pill"><span>02</span> Define</div>
+        <div class="ribbon-step-pill"><span>03</span> Ideate</div>
+        <div class="ribbon-step-pill"><span>04</span> Design</div>
+        <div class="ribbon-step-pill"><span>05</span> Prototype</div>
+        <div class="ribbon-step-pill"><span>06</span> Test & Refine</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       6. BOTTOM CTA BANNER (Design Match)
+       ========================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-box">
+        
+        <div class="cta-left">
+          <div class="cta-envelope-icon">
+            💌
+          </div>
+          <div class="cta-headings">
+            <h2>Let's create something<br/>amazing together! <span class="doodle-heart">♡</span></h2>
+            <p>Have a project in mind or want to review full Figma files? Let's chat.</p>
+          </div>
+        </div>
+
+        <div class="cta-contact-details">
+          <div class="contact-item">
+            <span>✉️</span> bhupendraupase@gmail.com
+          </div>
+          <div class="contact-item">
+            <span>📞</span> +918319458273
+          </div>
+          <div class="contact-item">
+            <span>📍</span> Bhopal, India
+          </div>
+        </div>
+
+        <button class="btn btn-coral" onclick="openContactModal()">
+          Let's Talk ✨
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       7. FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="brand-logo">
+        <span class="logo-title">Bhupendra Upase <span class="doodle-heart">♡</span></span>
+        <span class="logo-sub">Web Developer</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#behance" class="social-btn" title="Behance">Bē</a>
+        <a href="#linkedin" class="social-btn" title="LinkedIn">in</a>
+        <a href="#instagram" class="social-btn" title="Instagram">ig</a>
+        <a href="#dribbble" class="social-btn" title="Dribbble">🏀</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Bhupendra Upase. Handcrafted with love & clean CSS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       8. INTERACTIVE CASE STUDY DRAWER / MODAL
+       ========================================================== -->
+  <div class="case-modal-overlay" id="caseStudyModal">
+    <div class="case-modal-container">
+      <div class="case-modal-header">
+        <button class="modal-close-btn" onclick="closeCaseStudy()">&times;</button>
+        <span class="project-category" id="modalCategory">Mobile App Design</span>
+        <h2 style="font-size:2rem; font-weight:800; color:var(--text-title); margin: 6px 0;" id="modalTitle">Project Title</h2>
+        <div style="display:flex; gap:12px; font-size:0.88rem; color:var(--text-muted);" id="modalMeta">
+          <span>Client: FinPulse Labs</span> • <span>Timeline: 6 Weeks</span> • <span>Year: 2024</span>
+        </div>
+      </div>
+
+      <div class="case-modal-body">
+        
+        <!-- Impact Stat Boxes -->
+        <div class="modal-stats-row" id="modalStatsRow">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Problem / Challenge -->
+        <div class="modal-section-title">🚨 The Challenge</div>
+        <p id="modalChallenge" style="font-size:0.95rem; color:var(--text-body); line-height:1.7;">
+          Users were abandoning the account setup process due to overwhelming form fields and an opaque multi-step verification process.
+        </p>
+
+        <!-- Solution & UX Research -->
+        <div class="modal-section-title">💡 The UX Solution</div>
+        <p id="modalSolution" style="font-size:0.95rem; color:var(--text-body); line-height:1.7;">
+          We redesigned the flow into micro-commitments, introduced biometric authentication, and added gamified visual progress bars with delightful micro-haptics.
+        </p>
+
+        <!-- Client Quote -->
+        <div style="background:var(--primary-light); border-left:4px solid var(--primary); padding:16px 20px; border-radius:8px; margin:24px 0;">
+          <p style="font-style:italic; color:var(--text-title); font-size:0.92rem;" id="modalQuote">
+            "Working with Ananya was an absolute pleasure. She understood our vision perfectly and delivered a product that our users love."
+          </p>
+          <span style="display:block; margin-top:6px; font-weight:700; font-size:0.82rem; color:var(--primary);" id="modalAuthor">— Client Founder</span>
+        </div>
+
+        <!-- Actions -->
+        <div style="display:flex; gap:14px; margin-top:28px;">
+          <button class="btn btn-primary" onclick="openContactModal()">Book Similar Project ✨</button>
+          <button class="btn btn-outline" style="border:1px solid var(--border-subtle);" onclick="closeCaseStudy()">Back to Work</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       9. GENERAL CONTACT MODAL
+       ========================================================== -->
+  <div class="case-modal-overlay" id="contactModal">
+    <div class="simple-modal">
+      <button class="modal-close-btn" onclick="closeContactModal()">&times;</button>
+      
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--text-title); margin-bottom:6px;">
+        Let's Talk! <span class="doodle-heart">♡</span>
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+        Interested in any of these case studies or have an RFP? Reach out directly.
+      </p>
+
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Aditi Rao" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="aditi@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Project Scope or Question</label>
+          <textarea class="form-control" rows="3" placeholder="Tell me about what you're building..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-coral" style="width: 100%; margin-top: 8px;">
+          Send Message 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+   /* 1 cursor dom elements */
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing">
+      <span class="cursor-badge-text" id="cursorBadgeText"></span>
+    </div>
+
+  <!-- ==========================================================
+       VANILLA JAVASCRIPT
+       ========================================================== -->
+  <script>
+    // 1. Case Study Dataset
+    const caseStudiesData = {
+      fintrack: {
+        category: "Mobile App Design • Fintech",
+        title: "FinTrack — Personal Finance & Budgeting",
+        client: "FinTrack Technologies",
+        timeline: "8 Weeks",
+        year: "2024",
+        stats: [
+          { val: "+68%", label: "30-Day User Retention" },
+          { val: "3.4 min", label: "Avg Session Duration" },
+          { val: "4.8 ★", label: "App Store Rating" }
+        ],
+        challenge: "Early user data revealed that over 58% of new users abandoned manual expense logging after day 3. The transaction categorization felt tedious and visually dull.",
+        solution: "Engineered an intelligent smart-receipt scanner interface, added customizable budget buckets with animated visual rings, and introduced friendly congratulatory micro-interactions when users stayed below their spending limits.",
+        quote: "Working with Ananya was an absolute pleasure. She understood our vision perfectly and delivered a product that our users genuinely love.",
+        author: "Rohan Mehta, Founder @ FinTrack"
+      },
+      shopzy: {
+        category: "Web & E-Commerce",
+        title: "Shopzy — Curated Fashion Marketplace",
+        client: "Shopzy Retail Group",
+        timeline: "6 Weeks",
+        year: "2024",
+        stats: [
+          { val: "+41%", label: "Checkout Conversion" },
+          { val: "-35%", label: "Cart Abandonment" },
+          { val: "1.2s", label: "Mobile Page Load" }
+        ],
+        challenge: "The previous Shopify theme suffered from visual clutter, poor mobile thumbnail navigation, and a cumbersome 4-page checkout process that caused steep dropoffs.",
+        solution: "Crafted an editorial, magazine-style layout featuring sticky filter drawers, a single-page accordion checkout, and optimized web typography with WCAG AA accessibility compliance.",
+        quote: "Ananya is creative, detail-oriented and super professional. Her designs are not only beautiful but also highly functional for conversion.",
+        author: "Pooja Nair, Marketing Head @ Shopzy"
+      },
+      healthi: {
+        category: "Mobile App Design • Wellness",
+        title: "Healthi — Habit Formation Companion",
+        client: "Healthi Inc.",
+        timeline: "7 Weeks",
+        year: "2023",
+        stats: [
+          { val: "120k+", label: "Active Daily Habit Trackers" },
+          { val: "4.9 ★", label: "iOS App Store" },
+          { val: "+45%", label: "Streak Completion Rate" }
+        ],
+        challenge: "Health tracking apps often cause user burnout with excessive guilt-tripping notifications and complex medical graphs that discourage novices.",
+        solution: "Focused on positive behavioral psychology: gentle sound cues, soft pastel color progressions that fill up as habits are checked, and a zero-pressure catchup day system.",
+        quote: "She goes above and beyond to ensure the best user experience. Highly recommended for any product team!",
+        author: "Arjun Dev, Product Manager @ Healthi"
+      },
+      novalytics: {
+        category: "B2B SaaS Platform",
+        title: "Novalytics — Cloud Telemetry Hub",
+        client: "Nova Infrastructure",
+        timeline: "10 Weeks",
+        year: "2023",
+        stats: [
+          { val: "-52%", label: "Setup & Onboarding Time" },
+          { val: "3.2x", label: "Alert Triage Speed" },
+          { val: "$18M", label: "Series A Capital Raised" }
+        ],
+        challenge: "DevOps engineers were overwhelmed by fragmented charts, making it difficult to pinpoint latency spikes and server outages in complex Kubernetes clusters.",
+        solution: "Designed a centralized visual canvas with smart alert group collapsing, customizable high-contrast dark themes, and contextual drawer drill-downs.",
+        quote: "Ananya translated our intensely technical backend architecture into an interface our enterprise clients rave about.",
+        author: "Siddharth Rao, CTO @ Nova"
+      },
+      bloom: {
+        category: "Mobile App • Lifestyle",
+        title: "Bloom — Botanical Care & Identification",
+        client: "Bloom Botanical Co.",
+        timeline: "5 Weeks",
+        year: "2023",
+        stats: [
+          { val: "Top 5", label: "Lifestyle App Charts" },
+          { val: "85%", label: "Photo ID Accuracy UX" },
+          { val: "90k+", label: "Plants Saved" }
+        ],
+        challenge: "Plant parents struggled to know when and how much to water different species, resulting in plant loss and disengagement.",
+        solution: "Built a soothing, photo-first plant diary with automated push schedules based on local weather and light sensor feedback.",
+        quote: "Her aesthetic taste is exceptional. She brought real warmth and delight into our botanical application.",
+        author: "Kavya Menon, Design Director"
+      },
+      aura: {
+        category: "Design System & Tokens",
+        title: "Aura — Multi-Brand UI Kit",
+        client: "Enterprise Multi-Platform",
+        timeline: "9 Weeks",
+        year: "2024",
+        stats: [
+          { val: "3.5x", label: "Faster Sprint Velocity" },
+          { val: "100%", label: "Figma Variable Sync" },
+          { val: "400+", label: "Accessible Components" }
+        ],
+        challenge: "5 independent product teams were shipping inconsistent buttons, color shades, and unstandardized dialogs, wasting thousands of engineering hours.",
+        solution: "Standardized an atomic design token taxonomy covering spacing, typography, motion, and colors, fully documented with Zeroheight and Storybook.",
+        quote: "The single best design investment our engineering org made this year. Dev handoff friction is virtually zero.",
+        author: "Vikram Sen, VP of Engineering"
+      }
+    };
+
+    // 2. Open Case Study Modal
+    function openCaseStudy(id) {
+      const data = caseStudiesData[id];
+      if (!data) return;
+
+      document.getElementById('modalCategory').innerText = data.category;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalMeta').innerHTML = `
+        <span>Client: ${data.client}</span> • <span>Timeline: ${data.timeline}</span> • <span>Year: ${data.year}</span>
+      `;
+      document.getElementById('modalChallenge').innerText = data.challenge;
+      document.getElementById('modalSolution').innerText = data.solution;
+      document.getElementById('modalQuote').innerText = `"${data.quote}"`;
+      document.getElementById('modalAuthor').innerText = `— ${data.author}`;
+
+      // Render stats
+      const statsContainer = document.getElementById('modalStatsRow');
+      statsContainer.innerHTML = data.stats.map(s => `
+        <div class="modal-stat-box">
+          <h5>${s.val}</h5>
+          <p>${s.label}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('caseStudyModal').classList.add('active');
+    }
+
+    function closeCaseStudy() {
+      document.getElementById('caseStudyModal').classList.remove('active');
+    }
+
+    // 3. Category Filter Logic
+    function filterProjects(category, btn) {
+      // Toggle button active state
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-category');
+        if (category === 'all' || cats.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 4. Contact Modal
+    function openContactModal() {
+      closeCaseStudy();
+      document.getElementById('contactModal').classList.add('active');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+
+    // Dismiss on backdrop click
+    document.querySelectorAll('.case-modal-overlay').forEach(modal => {
+      modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
+        }
+      });
+    });
+
+    // Form submission feedback
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerText;
+      btn.innerText = 'Message Sent! ✨';
+      btn.style.background = '#38B294';
+
+      setTimeout(() => {
+        closeContactModal();
+        e.target.reset();
+        btn.innerText = original;
+        btn.style.background = '';
+      }, 1400);
+    }
+  </script>
+<script>
+    // 3 cursor physics & event script
+
+      (function initCustomCursor() {
+        // disable on touch screens (smartphones/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          return
+        }
+
+        const dot = document.querySelector('#cursorDot')
+        const ring = document.querySelector('#cursorRing')
+        const badgeText = document.querySelector('cursorBadgeText')
+
+        if (!dot || !ring) {
+          return
+        }
+
+
+        //add class to body to suppress default browser cursor
+        document.body.classList.add('has-custom-cursor')
+
+        // coordinates
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let isVisible = false;
+
+
+        // linear interpolation for smooth trailing lag
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        
+        //track mouse position
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // immediate position update for center dot
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+
+          if (!isVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isVisible = true;
+          }
+        });
+
+
+        // raf physics loop for the outer ring
+        function render() {
+          // 0.18 gives a soft, silk trailing spring feel
+          ringX = lerp(ringX, mouseX, 0.18);
+          ringY = lerp(ringY, mouseY, 0.18);
+
+          ring.style.left = `${ringX.toFixed(2)}px`;
+          ring.style.top = `${ringY.toFixed(2)}px`;
+
+          requestAnimationFrame(render);
+        }
+          requestAnimationFrame(render)
+
+
+          // hide cursor when cursor exits the browser window
+          document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0'
+            ring.style.opacity = '0';
+            isVisible = false;
+          });
+
+
+          // click effect (squish & spawn kawaii particles)
+          window.addEventListener('mousedown', (e) => {
+           ring.classList.add('is-clicking');
+           spawnParticles(e.clientX, e.clientY);
+          });
+
+
+          window.addEventListener('mouseup', () => {
+            ring.classList.remove('is-clicking')
+          });
+
+
+          // particle burst genrator
+          const particles = ['💖','✨','💕','⭐'];
+          function spawnParticles(x,y) {
+            const count = 3;
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('span');
+              particle.className = 'cursor-particle';
+              particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+
+
+              // random trajectories
+              const vx = (Math.random() - 0.5) * 80 + 'px';
+              const vy = -Math.random() * 60 - 20 + 'px'; // float upwards
+              const rot = (Math.random() - 0.5) * 60 + 'deg';
+              const size = Math.floor(Math.random() * 8) + 14 + 'px';
+
+              particle.style.left = `${x}px`;
+              particle.style.top = `${y}px`;
+              particle.style.fontSize = size;
+              particle.style.setProperty('--vx', vx);
+              particle.style.setProperty('--vy', vy);
+              particle.style.setProperty('--rot', rot);
+
+
+              document.body.appendChild(particle);
+
+              setTimeout(() => particle.remove(), 750);
+            }
+          }
+
+
+          // contextual hover detection (event delegation)
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target;
+
+            // 1. text inputs & textareas
+            if (target.closest('input, textarea, select')) {
+              ring.classList.add('is-input');
+              return
+            }
+
+            // 2. custom badge targets (add data-cursor= "your text" to any element)
+            const badgeTarget = target.closest('[data-cursor]');
+
+            if (badgeTarget) {
+              const text = badgeTarget.getAttribute('data-cursor') || 'View ❤';
+              badgeText.innerText = text;
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return;
+            }
+
+            // auto-badge for project & case study cards
+            const caseCard = target.closest('.project-card, .testimonial-card');
+            if (caseCard) {
+              badgeText.innerText = 'View ❤';
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return
+            }
+
+            // 3. regular interactive elements (buttons, links, pills)
+            if (target.closest('a, button, .btn, .filter-btn, .social-btn, [role="button"]')) {
+              ring.classList.add('is-hovering');
+              dot.classList.add('is-hovering');
+            }
+          });
+
+          document.addEventListener('mouseout', (e) => {
+            const target = e.target;
+
+            if (target.closest('input, textarea, select')) {
+              ring.classList.remove('is-input');
+            }
+            if (target.closest('[data-cursor], .project-card, .testimonial-card')) {
+              ring.classList.remove('is-badge');
+              dot.classList.remove('is-badge');
+            }
+
+            if (target.closest('a, button, .btn, .filter-btn, .tab-btn, .social-btn, [role="button"]')) {
+              ring.classList.remove('is-hovering');
+              dot.classList.remove('is-hovering');
+            }
+          });
+      })();
+  </script>
+</body>
+</html>

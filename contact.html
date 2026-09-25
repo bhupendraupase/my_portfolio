@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Inquiries — Bhupendra Upase | Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Caveat for handwritten notes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       1. HEADER & NAVIGATION
+       ========================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <a href="#inquiryForm" class="btn btn-primary">
+        Let's Talk <span style="font-size:1.1em">✨</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       2. HERO HEADER
+       ========================================================== -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-status-pill">
+        <span class="pulse-dot"></span>
+        Currently accepting select projects for Q3 / Q4
+      </div>
+
+      <h1>Let’s build something <span>delightful</span> together <span class="doodle-heart">♡</span></h1>
+      <p>Have an ambitious new app concept, need to redesign an existing checkout funnel, or want to level up your product’s design system? Say hello!</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. MAIN CONTACT SECTION (SPLIT GRID)
+       ========================================================== -->
+  <section class="contact-main-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT COLUMN: DIRECT TOUCHPOINTS & LIVE TIMEZONE -->
+        <div class="contact-left-col">
+          
+          <!-- Direct Details Card -->
+          <div class="direct-touch-card">
+            <h3 class="touch-heading">Direct Touchpoints 💌</h3>
+            <div class="contact-list">
+              
+              <!-- Email -->
+              <div class="touch-item">
+                <div class="touch-item-left">
+                  <div class="touch-icon-box box-mint">✉️</div>
+                  <div class="touch-details">
+                    <small>Direct Email</small>
+                    <strong id="emailText">bhupendraupase@gmail.com</strong>
+                  </div>
+                </div>
+                <button class="copy-btn" onclick="copyEmail()">Copy</button>
+              </div>
+
+              <!-- WhatsApp / Phone -->
+              <div class="touch-item">
+                <div class="touch-item-left">
+                  <div class="touch-icon-box box-coral">📞</div>
+                  <div class="touch-details">
+                    <small>Phone & WhatsApp</small>
+                    <strong>+918602271899</strong>
+                  </div>
+                </div>
+                <a href="https://wa.me/919876543210" target="_blank" class="copy-btn">Chat ↗</a>
+              </div>
+
+              <!-- Location -->
+              <div class="touch-item">
+                <div class="touch-item-left">
+                  <div class="touch-icon-box box-yellow">📍</div>
+                  <div class="touch-details">
+                    <small>Home Base</small>
+                    <strong>Bhopal, M.P., India</strong>
+                  </div>
+                </div>
+                <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">IST (UTC+5:30)</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Real-Time Bangalore Clock Card -->
+          <div class="time-status-card">
+            <div class="time-info">
+              <h4>Bhopal local Time (IST)</h4>
+              <div class="clock-time" id="bangaloreClock">--:--:-- --</div>
+            </div>
+            <div class="time-badge" id="workStatusBadge">
+              <span class="pulse-dot"></span> Office Hours Open
+            </div>
+          </div>
+
+          <!-- Social Coordinates -->
+          <div class="socials-box">
+            <h4>Follow Along & Social Profiles</h4>
+            <div class="social-pills-row">
+              <a href="#behance" class="social-pill"><span>Bē</span> Behance</a>
+              <a href="#linkedin" class="social-pill"><span>in</span> LinkedIn</a>
+              <a href="#dribbble" class="social-pill"><span>🏀</span> Dribbble</a>
+              <a href="#instagram" class="social-pill"><span>ig</span> Instagram</a>
+            </div>
+          </div>
+
+          <!-- Kawaii Mascot Card -->
+          <div class="contact-mascot-card" onclick="mascotCheer()">
+            <svg viewBox="0 0 160 170" fill="none">
+              <path d="M55 70C40 30 15 45 35 85C45 105 60 85 55 70Z" fill="#71D5BC" />
+              <path d="M105 70C120 30 145 45 125 85C115 105 100 85 105 70Z" fill="#71D5BC" />
+              <path d="M80 60C70 20 90 20 80 60Z" fill="#38B294"/>
+              <path d="M40 85H120L112 145C111 152 105 157 98 157H62C55 157 49 152 48 145L40 85Z" fill="#D2F2E7" stroke="#38B294" stroke-width="3"/>
+              <rect x="34" y="78" width="92" height="12" rx="6" fill="#A4E6D2" stroke="#38B294" stroke-width="3"/>
+              <ellipse cx="66" cy="118" rx="4.5" ry="5.5" fill="#1E3A32" />
+              <ellipse cx="94" cy="118" rx="4.5" ry="5.5" fill="#1E3A32" />
+              <circle cx="67.5" cy="116" r="1.5" fill="white" />
+              <circle cx="95.5" cy="116" r="1.5" fill="white" />
+              <ellipse cx="56" cy="124" rx="6" ry="3.5" fill="#FFB3AE" opacity="0.8" />
+              <ellipse cx="104" cy="124" rx="6" ry="3.5" fill="#FFB3AE" opacity="0.8" />
+              <path d="M74 125C76 129 84 129 86 125" stroke="#1E3A32" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div class="mascot-speech" id="mascotSpeech">
+              "Every great design begins with a friendly 'Hello'!"
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: INTERACTIVE PROJECT INQUIRY FORM -->
+        <div class="contact-form-card" id="inquiryForm">
+          <span class="form-header-badge">Start A Project</span>
+          <h2>Tell me about your vision ✨</h2>
+
+          <form id="projectContactForm" onsubmit="handleFormSubmit(event)">
+            
+            <!-- 1. Name and Email -->
+            <div class="form-group-block">
+              <div class="form-row-2">
+                <div>
+                  <label class="form-label-title">Your Name</label>
+                  <input type="text" class="input-field" placeholder="e.g. Maya Patel" required>
+                </div>
+                <div>
+                  <label class="form-label-title">Work Email</label>
+                  <input type="email" class="input-field" placeholder="maya@company.com" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Project Type Selector Chips -->
+            <div class="form-group-block">
+              <label class="form-label-title">What are you looking to build?</label>
+              <div class="chip-selector-group">
+                <label class="chip-item">
+                  <input type="checkbox" name="services" value="Mobile App" checked>
+                  <span class="chip-label">📱 Mobile App Design</span>
+                </label>
+                <label class="chip-item">
+                  <input type="checkbox" name="services" value="Web & SaaS">
+                  <span class="chip-label">💻 Web & SaaS Platform</span>
+                </label>
+                <label class="chip-item">
+                  <input type="checkbox" name="services" value="Design System">
+                  <span class="chip-label">🧩 Design System & Tokens</span>
+                </label>
+                <label class="chip-item">
+                  <input type="checkbox" name="services" value="Wireframes">
+                  <span class="chip-label">📐 Wireframing / MVP</span>
+                </label>
+                <label class="chip-item">
+                  <input type="checkbox" name="services" value="Redesign">
+                  <span class="chip-label">✨ UX Redesign & Audit</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3. Approximate Budget Range Chips -->
+            <div class="form-group-block">
+              <label class="form-label-title">Approximate Budget (USD)</label>
+              <div class="chip-selector-group">
+                <label class="chip-item">
+                  <input type="radio" name="budget" value="<$3k">
+                  <span class="chip-label">&lt; $1,000</span>
+                </label>
+                <label class="chip-item">
+                  <input type="radio" name="budget" value="$3k-$6k" checked>
+                  <span class="chip-label">$1,000 – $6,000</span>
+                </label>
+                <label class="chip-item">
+                  <input type="radio" name="budget" value="$6k-$12k">
+                  <span class="chip-label">$6,000 – $12,000</span>
+                </label>
+                <label class="chip-item">
+                  <input type="radio" name="budget" value="$12k+">
+                  <span class="chip-label">$12,000+</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Project Details -->
+            <div class="form-group-block">
+              <label class="form-label-title">Project Overview & Goals</label>
+              <textarea 
+                class="input-field" 
+                placeholder="Share a brief overview of your product, target audience, preferred timeline, or links to existing decks..." 
+                required
+              ></textarea>
+            </div>
+
+            <!-- 5. Submit Row -->
+            <div class="submit-row">
+              <div class="privacy-notice">
+                <span>🔒</span> Your details are private. I never spam or share information.
+              </div>
+              <button type="submit" class="btn btn-coral" id="submitBtn">
+                Send Inquiry 🚀
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. WHAT HAPPENS NEXT? (3-STEP TIMELINE)
+       ========================================================== -->
+  <section class="next-steps-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Next Steps</span>
+        <h2 class="section-title">What Happens <span>Next?</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">No endless back-and-forth emails. Here is our straightforward onboarding flow.</p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <div class="step-card">
+          <div class="step-number-tag">01</div>
+          <h3>Prompt Reply (< 24 Hours)</h3>
+          <p>I review your submission, verify my schedule availability, and reply with initial thoughts and preliminary scope clarifications.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-tag">02</div>
+          <h3>20-Min Discovery Chat</h3>
+          <p>We jump on a brief video call to discuss your business KPIs, target users, technical constraints, and mutual chemistry.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-tag">03</div>
+          <h3>Tailored Scope & Kickoff</h3>
+          <p>I prepare a clear fixed-price proposal detailing deliverables, sprint milestones, and we set up our shared Figma workspace!</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       5. INSTANT CALENDAR BOOKING BANNER
+       ========================================================== -->
+  <section class="schedule-banner-section">
+    <div class="container">
+      <div class="schedule-box">
+        
+        <div class="schedule-left">
+          <div class="cal-icon-large">📅</div>
+          <div class="schedule-copy">
+            <h2>Rather skip the back-and-forth emails?</h2>
+            <p>Grab a direct 20-minute introductory discovery slot on my calendar right away.</p>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-coral">
+          Schedule Intro Call ↗
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       6. SITE FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#behance" class="social-btn" title="Behance">Bē</a>
+        <a href="#linkedin" class="social-btn" title="LinkedIn">in</a>
+        <a href="#instagram" class="social-btn" title="Instagram">ig</a>
+        <a href="#dribbble" class="social-btn" title="Dribbble">🏀</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Bhupendra Upase. Handcrafted with love & clean CSS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       TOAST POPUP (Notification banner)
+       ========================================================== -->
+  <div class="toast-popup" id="toastNotification">
+    <span id="toastIcon">📋</span>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+
+   /* 1 cursor dom elements */
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing">
+      <span class="cursor-badge-text" id="cursorBadgeText"></span>
+    </div>
+
+  <!-- ==========================================================
+       VANILLA JAVASCRIPT
+       ========================================================== -->
+  <script>
+    // 1. Real-Time Bangalore Clock
+    function updateBangaloreClock() {
+      const now = new Date();
+      // Calculate IST time (UTC + 5:30)
+      const options = {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      
+      const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+      document.getElementById('bangaloreClock').innerText = timeString;
+
+      // Check if Bangalore time is between 9:30 AM and 7:00 PM IST
+      const istHour = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false }).format(now), 10);
+      const badge = document.getElementById('workStatusBadge');
+
+      if (istHour >= 9 && istHour < 20) {
+        badge.innerHTML = '<span class="pulse-dot"></span> Office Hours Open';
+        badge.style.background = 'var(--primary-light)';
+        badge.style.color = 'var(--primary)';
+      } else {
+        badge.innerHTML = '🌙 Offline • Responding Tomorrow';
+        badge.style.background = 'var(--coral-light)';
+        badge.style.color = 'var(--coral)';
+      }
+    }
+
+    setInterval(updateBangaloreClock, 1000);
+    updateBangaloreClock();
+
+    // 2. One-Click Copy Email to Clipboard
+    function copyEmail() {
+      const email = document.getElementById('emailText').innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('📋', 'Email copied to clipboard!');
+      }).catch(() => {
+        showToast('✉️', 'bhupendraupase@gmail.com');
+      });
+    }
+
+    // 3. Mascot Quotes Easter Egg
+    const mascotQuotes = [
+      '"Every great design begins with a friendly Hello!"',
+      '"Let\'s turn your messy ideas into pure magic ✨"',
+      '"Need high-converting flows? You\'ve come to the right place ♡"',
+      '"Fun fact: Good UI makes users smile everyday!"'
+    ];
+    let quoteIdx = 0;
+
+    function mascotCheer() {
+      quoteIdx = (quoteIdx + 1) % mascotQuotes.length;
+      document.getElementById('mascotSpeech').innerText = mascotQuotes[quoteIdx];
+      showToast('🪴', 'Sprout says: Have a wonderful day!');
+    }
+
+    // 4. Toast Notification Trigger
+    function showToast(icon, message) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastIcon').innerText = icon;
+      document.getElementById('toastMessage').innerText = message;
+
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // 5. Contact Form Submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.innerText;
+
+      submitBtn.innerText = 'Sending Inquiry... ⏳';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        submitBtn.innerText = 'Inquiry Sent! ✨';
+        submitBtn.style.background = '#38B294';
+        showToast('🚀', 'Message received! Bhupendra will reply in <24h.');
+
+        setTimeout(() => {
+          e.target.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+          submitBtn.style.background = '';
+        }, 2000);
+      }, 1200);
+    }
+  </script>
+
+<script>
+    // 3 cursor physics & event script
+
+      (function initCustomCursor() {
+        // disable on touch screens (smartphones/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          return
+        }
+
+        const dot = document.querySelector('#cursorDot')
+        const ring = document.querySelector('#cursorRing')
+        const badgeText = document.querySelector('cursorBadgeText')
+
+        if (!dot || !ring) {
+          return
+        }
+
+
+        //add class to body to suppress default browser cursor
+        document.body.classList.add('has-custom-cursor')
+
+        // coordinates
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let isVisible = false;
+
+
+        // linear interpolation for smooth trailing lag
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        
+        //track mouse position
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // immediate position update for center dot
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+
+          if (!isVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isVisible = true;
+          }
+        });
+
+
+        // raf physics loop for the outer ring
+        function render() {
+          // 0.18 gives a soft, silk trailing spring feel
+          ringX = lerp(ringX, mouseX, 0.18);
+          ringY = lerp(ringY, mouseY, 0.18);
+
+          ring.style.left = `${ringX.toFixed(2)}px`;
+          ring.style.top = `${ringY.toFixed(2)}px`;
+
+          requestAnimationFrame(render);
+        }
+          requestAnimationFrame(render)
+
+
+          // hide cursor when cursor exits the browser window
+          document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0'
+            ring.style.opacity = '0';
+            isVisible = false;
+          });
+
+
+          // click effect (squish & spawn kawaii particles)
+          window.addEventListener('mousedown', (e) => {
+           ring.classList.add('is-clicking');
+           spawnParticles(e.clientX, e.clientY);
+          });
+
+
+          window.addEventListener('mouseup', () => {
+            ring.classList.remove('is-clicking')
+          });
+
+
+          // particle burst genrator
+          const particles = ['💖','✨','💕','⭐'];
+          function spawnParticles(x,y) {
+            const count = 3;
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('span');
+              particle.className = 'cursor-particle';
+              particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+
+
+              // random trajectories
+              const vx = (Math.random() - 0.5) * 80 + 'px';
+              const vy = -Math.random() * 60 - 20 + 'px'; // float upwards
+              const rot = (Math.random() - 0.5) * 60 + 'deg';
+              const size = Math.floor(Math.random() * 8) + 14 + 'px';
+
+              particle.style.left = `${x}px`;
+              particle.style.top = `${y}px`;
+              particle.style.fontSize = size;
+              particle.style.setProperty('--vx', vx);
+              particle.style.setProperty('--vy', vy);
+              particle.style.setProperty('--rot', rot);
+
+
+              document.body.appendChild(particle);
+
+              setTimeout(() => particle.remove(), 750);
+            }
+          }
+
+
+          // contextual hover detection (event delegation)
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target;
+
+            // 1. text inputs & textareas
+            if (target.closest('input, textarea, select')) {
+              ring.classList.add('is-input');
+              return
+            }
+
+            // 2. custom badge targets (add data-cursor= "your text" to any element)
+            const badgeTarget = target.closest('[data-cursor]');
+
+            if (badgeTarget) {
+              const text = badgeTarget.getAttribute('data-cursor') || 'View ❤';
+              badgeText.innerText = text;
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return;
+            }
+
+            // auto-badge for project & case study cards
+            const caseCard = target.closest('.project-card, .testimonial-card');
+            if (caseCard) {
+              badgeText.innerText = 'View ❤';
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return
+            }
+
+            // 3. regular interactive elements (buttons, links, pills)
+            if (target.closest('a, button, .btn, .filter-btn, .social-btn, [role="button"]')) {
+              ring.classList.add('is-hovering');
+              dot.classList.add('is-hovering');
+            }
+          });
+
+          document.addEventListener('mouseout', (e) => {
+            const target = e.target;
+
+            if (target.closest('input, textarea, select')) {
+              ring.classList.remove('is-input');
+            }
+            if (target.closest('[data-cursor], .project-card, .testimonial-card')) {
+              ring.classList.remove('is-badge');
+              dot.classList.remove('is-badge');
+            }
+
+            if (target.closest('a, button, .btn, .filter-btn, .tab-btn, .social-btn, [role="button"]')) {
+              ring.classList.remove('is-hovering');
+              dot.classList.remove('is-hovering');
+            }
+          });
+      })();
+  </script>
+</body>
+</html>

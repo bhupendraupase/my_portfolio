@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Bhupendra Upase | Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Caveat for handwritten notes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       HEADER & NAVIGATION
+       ========================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+
+      <button class="btn btn-primary" onclick="openContactModal()">
+        Let's Talk <span style="font-size:1.1em">✨</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       HERO: SERVICES OVERVIEW
+       ========================================================== -->
+  <section class="services-hero">
+    <div class="container">
+      <span class="hero-sparkle">What I can do for you ♡</span>
+      <h1>End-to-end design solutions that bring your <span>brightest ideas</span> to life</h1>
+      <p>From initial market discovery to high-fidelity clickable prototypes and design systems, I help founders and teams build digital experiences people truly adore.</p>
+
+      <div class="hero-badges-strip">
+        <div class="hero-stat-pill">
+          <strong>40+</strong> <span>Digital Projects Shipped</span>
+        </div>
+        <div class="hero-stat-pill">
+          <strong>99%</strong> <span>Client Satisfaction Rate</span>
+        </div>
+        <div class="hero-stat-pill">
+          <strong>3.4x</strong> <span>Average Conversion Boost</span>
+        </div>
+        <div class="hero-stat-pill">
+          <strong>100%</strong> <span>Developer-Ready Specs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CORE SERVICES CARDS (Based directly on the screenshot)
+       ========================================================== -->
+  <section class="services-main-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Core Offerings</span>
+        <h2 class="section-title">Tailored Design <span>Expertise</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">Deep craft, intentional typography, human ergonomics, and business-focused UX.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 1. UI/UX Design (Featured) -->
+        <div class="service-card featured">
+          <span class="featured-tag">Most Popular</span>
+          <div class="service-icon-box mint">
+            <!-- Pencil / Compass Icon -->
+            🎨
+          </div>
+          <h3>UI/UX Design</h3>
+          <p class="service-summary">
+            Designing intuitive interfaces that provide seamless user journeys, eliminating friction and turning first-time visitors into loyal evangelists.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Complete User Flow Architecture
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                High-Fidelity Figma Screens (Auto-layout)
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Component Variables & Color Palettes
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Interactive In-browser Preview
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">Figma • Miro</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('UI/UX Design')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- 2. Mobile App Design -->
+        <div class="service-card">
+          <div class="service-icon-box coral">
+            📱
+          </div>
+          <h3>Mobile App Design</h3>
+          <p class="service-summary">
+            Crafting beautiful & functional native mobile applications for iOS and Android platforms tailored to thumbs, gestures, and tactile feedback.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Apple Human Interface & Material 3 Specs
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                App Store & Play Store Presentation Kit
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Light & Dark Mode Interface States
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Micro-haptic Touch Point Guidelines
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">iOS HIG • Material Design</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('Mobile App Design')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- 3. Web & SaaS Design -->
+        <div class="service-card">
+          <div class="service-icon-box blue">
+            💻
+          </div>
+          <h3>Web & SaaS Design</h3>
+          <p class="service-summary">
+            Creating modern, fully responsive web apps and high-converting marketing landing pages that are blazingly fast, accessible, and clean.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Desktop, Tablet & Mobile Breakpoints
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                WCAG 2.1 AA Color Accessibility Audit
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Optimized SVG Vector Asset Export
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Framer or Webflow Ready Assets
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">Responsive 12-col • Framer</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('Web & SaaS Design')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- 4. Wireframing & Prototyping -->
+        <div class="service-card">
+          <div class="service-icon-box purple">
+            📐
+          </div>
+          <h3>Wireframing & Prototyping</h3>
+          <p class="service-summary">
+            Turning raw early concepts into interactive, clickable prototypes for investor pitches, stakeholder sign-offs, and rapid user testing.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Low & Mid-Fidelity Wireframes
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Complex Smart-Animate Interactions
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Shareable Click-Through Links
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Interaction Spec Documentation
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">ProtoPie • Figma Prototype</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('Prototyping')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- 5. User Research & Usability -->
+        <div class="service-card">
+          <div class="service-icon-box yellow">
+            🔍
+          </div>
+          <h3>User Research & Testing</h3>
+          <p class="service-summary">
+            Uncovering actual user pain points, behavioral hurdles, and latent desires to validate product hypotheses before spending dev capital.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                User Interview Scripts & Synthesis
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Detailed Persona & Empathy Maps
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Unmoderated Maze Usability Audit
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Actionable UX Friction Report
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">Maze • Lookback • Notion</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('User Research')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- 6. Design Systems & Tokenization -->
+        <div class="service-card">
+          <div class="service-icon-box mint">
+            🧩
+          </div>
+          <h3>Design Systems & Tokens</h3>
+          <p class="service-summary">
+            Architecting scalable, modular UI kits and design tokens that bridge design and code, empowering engineering teams to ship 3x faster.
+          </p>
+          <div class="service-deliverables">
+            <h5>What You Get:</h5>
+            <ul class="deliverables-list">
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Atomic Component Library in Figma
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                CSS Variable & JSON Token Handoff
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Zeroheight / Storybook Documentation
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                Live Dev Handoff Walkthrough
+              </li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <span class="service-tools">Tokens Studio • Zeroheight</span>
+            <a href="javascript:void(0)" onclick="selectServiceInModal('Design Systems')" class="service-cta-link">Get Started →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       INTERACTIVE PROJECT COST & TIMELINE ESTIMATOR
+       ========================================================== -->
+  <section class="estimator-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Instant Estimator</span>
+        <h2 class="section-title">Plan Your <span>Project Scope</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">Select your requirements below to calculate a transparent ballpark estimate and delivery timeline.</p>
+      </div>
+
+      <div class="estimator-box">
+        
+        <!-- Interactive Controls -->
+        <div class="estimator-left">
+          <h3>Configure Requirements</h3>
+          <p>Every digital product has unique needs. Tune these parameters:</p>
+
+          <!-- 1. Platform Type -->
+          <div class="calc-group">
+            <label class="calc-label">1. What are we designing?</label>
+            <div class="radio-pills">
+              <label class="pill-radio">
+                <input type="radio" name="projectType" value="mobile" checked onchange="calculateEstimate()">
+                <span class="pill-label">📱 Mobile App (iOS/Android)</span>
+              </label>
+              <label class="pill-radio">
+                <input type="radio" name="projectType" value="saas" onchange="calculateEstimate()">
+                <span class="pill-label">💻 SaaS Web Platform</span>
+              </label>
+              <label class="pill-radio">
+                <input type="radio" name="projectType" value="website" onchange="calculateEstimate()">
+                <span class="pill-label">🌐 Marketing / Landing Page</span>
+              </label>
+  
+</div>
+          </div>
+
+          <!-- 2. Scale / Screens -->
+          <div class="calc-group">
+            <label class="calc-label">2. Estimated Size / Scope</label>
+            <div class="radio-pills">
+              <label class="pill-radio">
+                <input type="radio" name="projectScale" value="small" checked onchange="calculateEstimate()">
+                <span class="pill-label">MVP (1 - 5 Screens)</span>
+              </label>
+              <label class="pill-radio">
+                <input type="radio" name="projectScale" value="medium" onchange="calculateEstimate()">
+                <span class="pill-label">Standard (6 - 15 Screens)</span>
+              </label>
+              <label class="pill-radio">
+                <input type="radio" name="projectScale" value="large" onchange="calculateEstimate()">
+                <span class="pill-label">Enterprise (16+ Screens)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 3. Add-ons -->
+          <div class="calc-group">
+            <label class="calc-label">3. Optional Add-ons</label>
+            <div class="radio-pills">
+              <label class="pill-radio">
+                <input type="checkbox" id="addonSystem" onchange="calculateEstimate()">
+                <span class="pill-label">🧩 Full Design System (+1 wk)</span>
+              </label>
+              <label class="pill-radio">
+                <input type="checkbox" id="addonResearch" onchange="calculateEstimate()">
+                <span class="pill-label">🧪 User Usability Testing (+1 wk)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estimate Output Summary Card -->
+        <div class="estimator-right">
+          <div>
+            <span class="estimate-title">Estimated Investment</span>
+            <div class="estimate-price" id="calcPrice">$2,400</div>
+            <div class="estimate-timeline" id="calcTime">⏱️ Delivery in ~2-3 Weeks</div>
+
+            <div class="estimate-includes">
+              <strong>Includes as Standard:</strong>
+              <span>✓ Figma Source Files with Auto-Layout</span>
+              <span>✓ Interactive Clickable Prototype</span>
+              <span>✓ Comprehensive Developer Handoff</span>
+              <span>✓ 2 Rounds of Iterative Revisions</span>
+            </div>
+          </div>
+
+          <button class="btn btn-coral" onclick="bookEstimatedScope()" style="width:100%;">
+            Inquire for This Scope ✨
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       ENGAGEMENT MODELS: HOW WE WORK
+       ========================================================== -->
+  <section class="engagement-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Ways To Partner</span>
+        <h2 class="section-title">Flexible <span>Engagement Models</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">Whether you need rapid sprints or ongoing design guidance, pick what suits your team stage best.</p>
+      </div>
+
+      <div class="models-grid">
+
+        <!-- Model 1: Sprint -->
+        <div class="model-card">
+          <span class="model-badge badge-sprint">Rapid Delivery</span>
+          <h3>Design Sprint</h3>
+          <p>A focused 2-week sprint aimed at solving a specific bottleneck, redesigning a checkout funnel, or creating a high-impact pitch deck prototype.</p>
+          <ul class="model-points">
+            <li>⚡ 2 Weeks Duration</li>
+            <li>⚡ Dedicated 1-on-1 Slack Channel</li>
+            <li>⚡ Daily async async loom updates</li>
+            <li>⚡ 1 Core Feature or Flow</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;" onclick="selectServiceInModal('Design Sprint')">Choose Sprint</button>
+        </div>
+
+        <!-- Model 2: End-to-End Product -->
+        <div class="model-card" style="border-color: var(--primary);">
+          <span class="model-badge badge-project">Most Comprehensive</span>
+          <h3>Full Product Cycle</h3>
+          <p>From day 1 discovery workshop all the way to tokenized engineering handoff. Ideal for early-stage founders building an MVP or major 2.0 pivot.</p>
+          <ul class="model-points">
+            <li>✨ 4 to 8 Weeks Duration</li>
+            <li>✨ Research, Wireframes & Final UI</li>
+            <li>✨ Interactive Prototype for Users</li>
+            <li>✨ Complete Figma Token System</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" onclick="selectServiceInModal('Full Product Cycle')">Choose End-to-End</button>
+        </div>
+
+        <!-- Model 3: Retainer -->
+        <div class="model-card">
+          <span class="model-badge badge-retainer">Fractional Lead</span>
+          <h3>Monthly UX Retainer</h3>
+          <p>Ongoing design leadership for growing teams. Continuous product optimization, new feature iterations, and regular design reviews.</p>
+          <ul class="model-points">
+            <li>💎 Flexible Monthly Commitment</li>
+            <li>💎 Priority turnaround queue</li>
+            <li>💎 Weekly sync with founders/engineers</li>
+            <li>💎 Pause or cancel anytime</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;" onclick="selectServiceInModal('Monthly Retainer')">Choose Retainer</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       FREQUENTLY ASKED QUESTIONS
+       ========================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently <span>Asked Questions</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">Everything you need to know before we kick off our collaboration.</p>
+      </div>
+
+      <div class="faq-container">
+        
+        <!-- Question 1 -->
+        <div class="faq-item active">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What does your developer handoff look like?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            I don't just toss designs over the fence. Every screen is configured with Figma Auto-Layout, organized layers, design token variables (spacing, typography, color semantics), and exported responsive assets. I also host a 45-minute live handoff walkthrough with your engineering team and offer async QA support as they build.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do revisions and feedback loops work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We collaborate seamlessly using Figma comments and weekly video calls. All projects include structured revision checkpoints at each milestone (Wireframe approval, Visual direction sign-off, and Final high-fidelity polish) so there are never any unexpected surprises.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you write code or handle front-end development?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            My primary superpower is UI/UX product design, systems, and user empathy. However, because I have a strong foundation in modern HTML5, CSS3, and responsive grid ergonomics, everything I design is 100% technically feasible and realistic to code without headaches.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How quickly can we kick off?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Depending on current queue availability, I typically start new client collaborations within 5 to 7 business days following our initial discovery call and contract confirmation.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       BOTTOM CTA BANNER (Design Match to Original)
+       ========================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-box">
+        
+        <div class="cta-left">
+          <div class="cta-envelope-icon">
+            💌
+          </div>
+          <div class="cta-headings">
+            <h2>Let's create something<br/>amazing together! <span class="doodle-heart">♡</span></h2>
+            <p>Have a project in mind or want a custom scope? I'd love to hear from you.</p>
+          </div>
+        </div>
+
+        <div class="cta-contact-details">
+          <div class="contact-item">
+            <span>✉️</span> bhupendraupase@gmail.com
+          </div>
+          <div class="contact-item">
+            <span>📞</span> +918319458273
+          </div>
+          <div class="contact-item">
+            <span>📍</span> Bhopal, India
+          </div>
+        </div>
+
+        <button class="btn btn-coral" onclick="openContactModal()">
+          Let's Talk ✨
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="brand-logo">
+        <span class="logo-title">Bhupendra Upase 
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#behance" class="social-btn" title="Behance">Bē</a>
+        <a href="#linkedin" class="social-btn" title="LinkedIn">in</a>
+        <a href="#instagram" class="social-btn" title="Instagram">ig</a>
+        <a href="#dribbble" class="social-btn" title="Dribbble">🏀</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Bhupendra Upase. Handcrafted with love & clean CSS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       CONTACT & INQUIRY MODAL
+       ========================================================== -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContactModal()">&times;</button>
+      
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--text-title); margin-bottom:6px;">
+        Let's Work Together! <span class="doodle-heart">♡</span>
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+        Tell me a bit about your goals and I’ll get back to you within 24 hours.
+      </p>
+
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Rohan Mehta" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="rohan@startup.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Selected Service / Scope</label>
+          <input type="text" id="modalServiceInput" class="form-control" value="UI/UX Design" required>
+        </div>
+
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea class="form-control" placeholder="Share links, brief, or timeline expectations..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-coral" style="width: 100%; margin-top: 8px;">
+          Submit Inquiry 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+   /* 1 cursor dom elements */
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing">
+      <span class="cursor-badge-text" id="cursorBadgeText"></span>
+    </div>
+
+  <!-- ==========================================================
+       VANILLA JAVASCRIPT
+       ========================================================== -->
+  <script>
+    // 1. Interactive Project Calculator Logic
+    function calculateEstimate() {
+      const type = document.querySelector('input[name="projectType"]:checked').value;
+      const scale = document.querySelector('input[name="projectScale"]:checked').value;
+      const addSystem = document.getElementById('addonSystem').checked;
+      const addResearch = document.getElementById('addonResearch').checked;
+
+      let basePrice = 2000;
+      let weeks = 2;
+
+      // Type adjustment
+      if (type === 'mobile') {
+        basePrice = 2400;
+        weeks = 2.5;
+      } else if (type === 'saas') {
+        basePrice = 2800;
+        weeks = 3;
+      } else if (type === 'website') {
+        basePrice = 1800;
+        weeks = 2;
+      }
+
+      // Scale multiplier
+      if (scale === 'medium') {
+        basePrice *= 1.7;
+        weeks += 1.5;
+      } else if (scale === 'large') {
+        basePrice *= 2.6;
+        weeks += 3;
+      }
+
+      // Add-ons
+      if (addSystem) {
+        basePrice += 800;
+        weeks += 1;
+      }
+      if (addResearch) {
+        basePrice += 650;
+        weeks += 1;
+      }
+
+      // Format currency
+      const formattedPrice = '$' + Math.round(basePrice).toLocaleString();
+      const formattedTime = `⏱️ Delivery in ~${Math.floor(weeks)}-${Math.ceil(weeks + 1)} Weeks`;
+
+      document.getElementById('calcPrice').innerText = formattedPrice;
+      document.getElementById('calcTime').innerText = formattedTime;
+    }
+
+    function bookEstimatedScope() {
+      const type = document.querySelector('input[name="projectType"]:checked').parentElement.textContent.trim();
+      const price = document.getElementById('calcPrice').innerText;
+      selectServiceInModal(`${type} (Estimated ${price})`);
+    }
+
+    // 2. FAQ Accordion Logic
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      // Close all open FAQs
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+
+      // If clicked wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // 3. Modal Controls
+    function openContactModal() {
+      document.getElementById('contactModal').classList.add('active');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+
+    function selectServiceInModal(serviceName) {
+      document.getElementById('modalServiceInput').value = serviceName;
+      openContactModal();
+    }
+
+    // Dismiss modal on backdrop click
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) closeContactModal();
+    });
+
+    // Handle Form Submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = 'Inquiry Received! ✨';
+      btn.style.background = '#38B294';
+
+      setTimeout(() => {
+        closeContactModal();
+        e.target.reset();
+        btn.innerText = originalText;
+        btn.style.background = '';
+      }, 1500);
+    }
+  </script>
+<script>
+    // 3 cursor physics & event script
+
+      (function initCustomCursor() {
+        // disable on touch screens (smartphones/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          return
+        }
+
+        const dot = document.querySelector('#cursorDot')
+        const ring = document.querySelector('#cursorRing')
+        const badgeText = document.querySelector('cursorBadgeText')
+
+        if (!dot || !ring) {
+          return
+        }
+
+
+        //add class to body to suppress default browser cursor
+        document.body.classList.add('has-custom-cursor')
+
+        // coordinates
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let isVisible = false;
+
+
+        // linear interpolation for smooth trailing lag
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        
+        //track mouse position
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // immediate position update for center dot
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+
+          if (!isVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isVisible = true;
+          }
+        });
+
+
+        // raf physics loop for the outer ring
+        function render() {
+          // 0.18 gives a soft, silk trailing spring feel
+          ringX = lerp(ringX, mouseX, 0.18);
+          ringY = lerp(ringY, mouseY, 0.18);
+
+          ring.style.left = `${ringX.toFixed(2)}px`;
+          ring.style.top = `${ringY.toFixed(2)}px`;
+
+          requestAnimationFrame(render);
+        }
+          requestAnimationFrame(render)
+
+
+          // hide cursor when cursor exits the browser window
+          document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0'
+            ring.style.opacity = '0';
+            isVisible = false;
+          });
+
+
+          // click effect (squish & spawn kawaii particles)
+          window.addEventListener('mousedown', (e) => {
+           ring.classList.add('is-clicking');
+           spawnParticles(e.clientX, e.clientY);
+          });
+
+
+          window.addEventListener('mouseup', () => {
+            ring.classList.remove('is-clicking')
+          });
+
+
+          // particle burst genrator
+          const particles = ['💖','✨','💕','⭐'];
+          function spawnParticles(x,y) {
+            const count = 3;
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('span');
+              particle.className = 'cursor-particle';
+              particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+
+
+              // random trajectories
+              const vx = (Math.random() - 0.5) * 80 + 'px';
+              const vy = -Math.random() * 60 - 20 + 'px'; // float upwards
+              const rot = (Math.random() - 0.5) * 60 + 'deg';
+              const size = Math.floor(Math.random() * 8) + 14 + 'px';
+
+              particle.style.left = `${x}px`;
+              particle.style.top = `${y}px`;
+              particle.style.fontSize = size;
+              particle.style.setProperty('--vx', vx);
+              particle.style.setProperty('--vy', vy);
+              particle.style.setProperty('--rot', rot);
+
+
+              document.body.appendChild(particle);
+
+              setTimeout(() => particle.remove(), 750);
+            }
+          }
+
+
+          // contextual hover detection (event delegation)
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target;
+
+            // 1. text inputs & textareas
+            if (target.closest('input, textarea, select')) {
+              ring.classList.add('is-input');
+              return
+            }
+
+            // 2. custom badge targets (add data-cursor= "your text" to any element)
+            const badgeTarget = target.closest('[data-cursor]');
+
+            if (badgeTarget) {
+              const text = badgeTarget.getAttribute('data-cursor') || 'View ❤';
+              badgeText.innerText = text;
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return;
+            }
+
+            // auto-badge for project & case study cards
+            const caseCard = target.closest('.project-card, .testimonial-card');
+            if (caseCard) {
+              badgeText.innerText = 'View ❤';
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return
+            }
+
+            // 3. regular interactive elements (buttons, links, pills)
+            if (target.closest('a, button, .btn, .filter-btn, .social-btn, [role="button"]')) {
+              ring.classList.add('is-hovering');
+              dot.classList.add('is-hovering');
+            }
+          });
+
+          document.addEventListener('mouseout', (e) => {
+            const target = e.target;
+
+            if (target.closest('input, textarea, select')) {
+              ring.classList.remove('is-input');
+            }
+            if (target.closest('[data-cursor], .project-card, .testimonial-card')) {
+              ring.classList.remove('is-badge');
+              dot.classList.remove('is-badge');
+            }
+
+            if (target.closest('a, button, .btn, .filter-btn, .tab-btn, .social-btn, [role="button"]')) {
+              ring.classList.remove('is-hovering');
+              dot.classList.remove('is-hovering');
+            }
+          });
+      })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Testimonials & Kind Words — Bhupendra Upase | Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Caveat for handwritten notes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       HEADER & NAVIGATION
+       ========================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+      </ul>
+
+      <button class="btn btn-primary" onclick="openContactModal()">
+        Let's Talk <span style="font-size:1.1em">✨</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       HERO: TESTIMONIALS & TRUST SCORE
+       ========================================================== -->
+  <section class="testimonials-hero">
+    <div class="container">
+      <span class="hero-sparkle">Kind Words & Endorsements ♡</span>
+      <h1>Trusted by founders, PMs, and engineering leads <span>globally</span></h1>
+      <p>I don't just deliver mockups—I build trusted, long-term partnerships. Here’s what teams have to say about my speed, empathy, and product craft.</p>
+
+      <!-- Trust Badges Strip -->
+      <div class="trust-summary-strip">
+        <div class="trust-badge-card">
+          <div class="star-group">★★★★★</div>
+          <strong>5.0 / 5.0</strong>
+          <span>(42 Verified Reviews)</span>
+        </div>
+        <div class="trust-badge-card">
+          <span>🤝 <strong>94%</strong> Repeat or Referral Rate</span>
+        </div>
+        <div class="trust-badge-card">
+          <span>⚡ <strong>100%</strong> On-Time Delivery</span>
+        </div>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="review-filter-bar">
+        <button class="filter-pill-btn active" onclick="filterReviews('all', this)">All Stories</button>
+        <button class="filter-pill-btn" onclick="filterReviews('founders', this)">Founders & CEOs</button>
+        <button class="filter-pill-btn" onclick="filterReviews('product', this)">Product Managers</button>
+        <button class="filter-pill-btn" onclick="filterReviews('engineering', this)">Engineering Leads</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       SPOTLIGHT REVIEWS (Includes FinTrack, Shopzy, Healthi)
+       ========================================================== -->
+  <section class="spotlight-section">
+    <div class="container">
+      <div class="spotlight-grid" id="reviewsContainer">
+
+        <!-- 1. Rohan Mehta (FinTrack) - From Original Image -->
+        <div class="review-card featured-card" data-category="founders">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill">
+              📈 FinTrack • +68% Retention Uplift
+            </div>
+            <p class="review-body">
+              "Working with Bhupendra was an absolute pleasure. He understood our vision perfectly and delivered a product that our users genuinely love. The onboarding flow he designed cut our dropoff rate in half!"
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Rohan Mehta">
+            <div class="author-details">
+              <div class="author-name">Rohan Mehta</div>
+              <div class="author-role">Founder, <span>FinTrack</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Pooja Nair (Shopzy) - From Original Image -->
+        <div class="review-card" data-category="product">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill coral">
+              🛍️ Shopzy • +41% Conversion
+            </div>
+            <p class="review-body">
+              "Bhupendra is creative, detail-oriented and super professional. His designs are not only beautiful but also highly functional. Our checkout conversion surged within two weeks of launching her redesign."
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Pooja Nair">
+            <div class="author-details">
+              <div class="author-name">Pooja Nair</div>
+              <div class="author-role">Marketing Head, <span>Shopzy</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Arjun Dev (Healthi) - From Original Image -->
+        <div class="review-card" data-category="product">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill purple">
+              🧘 Healthi • 4.9 ★ App Rating
+            </div>
+            <p class="review-body">
+              "He goes above and beyond to ensure the best user experience. His ability to translate complex behavioral psychology into simple, calming UI screens is world-class. Highly recommended!"
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Arjun Dev">
+            <div class="author-details">
+              <div class="author-name">Arjun Dev</div>
+              <div class="author-role">Product Manager, <span>Healthi</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Siddharth Rao (CTO / Engineering) -->
+        <div class="review-card" data-category="engineering">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill">
+              💻 Novalytics • 100% Dev Hand-off Spec
+            </div>
+            <p class="review-body">
+              "As a CTO, working with Bhupendra was refreshing. Her Figma files have flawless Auto-Layout, clean naming conventions, and well-thought-out responsive states. Our frontend developers didn’t have to guess a single token."
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Siddharth Rao">
+            <div class="author-details">
+              <div class="author-name">Siddharth Rao</div>
+              <div class="author-role">CTO, <span>Nova Infrastructure</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Kavya Menon (Founders / Lifestyle Brand) -->
+        <div class="review-card" data-category="founders">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill coral">
+              🪴 Bloom • App of the Day
+            </div>
+            <p class="review-body">
+              "Bhupendra brought our botanical app to life with charming, organic aesthetics that our community fell in love with immediately. He was transparent, fast, and proactive at every stage of the design sprint."
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Kavya Menon">
+            <div class="author-details">
+              <div class="author-name">Kavya Menon</div>
+              <div class="author-role">Co-Founder, <span>Bloom Botanics</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Vikram Sen (VP Engineering / Multi-Platform) -->
+        <div class="review-card" data-category="engineering">
+          <span class="quote-mark">“</span>
+          <div>
+            <div class="project-outcome-pill purple">
+              🧩 Aura • 3.5x Sprint Velocity
+            </div>
+            <p class="review-body">
+              "He built an atomic design system that united 5 disjointed product suites. We cut down design-to-code cycle times by 70%. He is the rarest breed of designer who understands both beauty and code semantics."
+            </p>
+          </div>
+          <div class="client-author-info">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="Vikram Sen">
+            <div class="author-details">
+              <div class="author-name">Vikram Sen</div>
+              <div class="author-role">VP of Engineering, <span>Aura Suite</span></div>
+              <div class="review-card-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CLIENT LOGOS / SOCIAL PROOF STRIP
+       ========================================================== -->
+  <section class="clients-logo-section">
+    <div class="container">
+      <div class="logos-header-text">Trusted by product teams across modern startups & enterprises</div>
+      <div class="client-logos-row">
+        <div class="company-logo-item">💳 FINTRACK</div>
+        <div class="company-logo-item">🛍️ SHOPZY</div>
+        <div class="company-logo-item">🧘 HEALTHI</div>
+        <div class="company-logo-item">☁️ NOVALYTICS</div>
+        <div class="company-logo-item">🌿 BLOOM</div>
+        <div class="company-logo-item">⚡ AURA UI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       WHY TEAMS LOVE WORKING WITH ME (PILLARS)
+       ========================================================== -->
+  <section class="why-pillars-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Client Experience</span>
+        <h2 class="section-title">What It's Like To <span>Partner With Me</span> <span class="doodle-heart">♡</span></h2>
+        <p class="section-subtitle">Consistent communication, zero ego, fast iteration, and bulletproof handoff files.</p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <div class="pillar-card">
+          <div class="pillar-icon p-mint">⏱️</div>
+          <h4>Zero Ghosting Guarantee</h4>
+          <p>You’ll always know the exact status of your project. Daily Slack check-ins and structured weekly Loom design walkthroughs.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon p-coral">🤝</div>
+          <h4>Engineering-Ready</h4>
+          <p>Never hand-off messy files. Everything comes with auto-layout, standard spacing 8pt grids, variable states, and zero guess-work.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon p-purple">🎯</div>
+          <h4>Business ROI First</h4>
+          <p>Good looks are only half the battle. Every interaction is mapped to lower churn, improve retention, or lift checkout conversions.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon p-yellow">✨</div>
+          <h4>Joyful Collaboration</h4>
+          <p>Design should be exciting! Expect positive energy, thoughtful problem-solving, and pleasant, stress-free milestone reviews.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       SHOUTOUT BANNER (LEAVE A REVIEW CTA)
+       ========================================================== -->
+  <div class="container">
+    <div class="shoutout-banner">
+      <div class="shoutout-left">
+        <div class="shoutout-bubble-icon">⭐</div>
+        <div class="shoutout-text">
+          <h3>Worked together recently?</h3>
+          <p>Your feedback helps me grow and helps other ambitious teams build better software.</p>
+        </div>
+      </div>
+      <button class="btn btn-outline" onclick="openReviewModal()">
+        Write a Review ✍️
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       BOTTOM CTA BANNER (Design Match)
+       ========================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-box">
+        
+        <div class="cta-left">
+          <div class="cta-envelope-icon">
+            💌
+          </div>
+          <div class="cta-headings">
+            <h2>Let's create something<br/>amazing together! <span class="doodle-heart">♡</span></h2>
+            <p>Ready to join this list of happy founders and product leaders? Let’s connect.</p>
+          </div>
+        </div>
+
+        <div class="cta-contact-details">
+          <div class="contact-item">
+            <span>✉️</span> bhupendraupase@gmail.com
+          </div>
+          <div class="contact-item">
+            <span>📞</span> +918319458273
+          </div>
+          <div class="contact-item">
+            <span>📍</span> Bhopal, India
+          </div>
+        </div>
+
+        <button class="btn btn-coral" onclick="openContactModal()">
+          Let's Talk ✨
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#behance" class="social-btn" title="Behance">Bē</a>
+        <a href="#linkedin" class="social-btn" title="LinkedIn">in</a>
+        <a href="#instagram" class="social-btn" title="Instagram">ig</a>
+        <a href="#dribbble" class="social-btn" title="Dribbble">🏀</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Bhupendra Upase. Handcrafted with love & clean CSS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       MODAL 1: CONTACT DIALOG
+       ========================================================== -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContactModal()">&times;</button>
+      
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--text-title); margin-bottom:6px;">
+        Let's Talk! <span class="doodle-heart">♡</span>
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+        Have a project in mind or want to schedule a 20-min introductory discovery call?
+      </p>
+
+      <form onsubmit="handleContactSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Maya Patel" required>
+        </div>
+
+        <div class="form-group">
+          <label>Work Email</label>
+          <input type="email" class="form-control" placeholder="maya@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>How can I help you?</label>
+          <textarea class="form-control" rows="3" placeholder="Tell me about your product, timeline, or scope..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-coral" style="width: 100%; margin-top: 8px;">
+          Send Message 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       MODAL 2: WRITE A REVIEW DIALOG
+       ========================================================== -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+      
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--text-title); margin-bottom:6px;">
+        Share Your Experience <span class="doodle-heart">♡</span>
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+        Thank you for trusting me with your product!
+      </p>
+
+      <form onsubmit="handleReviewSubmit(event)">
+        <div class="form-group">
+          <label>Your Name & Title</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Shah, Co-Founder" required>
+        </div>
+
+        <div class="form-group">
+          <label>Company / Project Name</label>
+          <input type="text" class="form-control" placeholder="e.g. FinTech Labs" required>
+        </div>
+
+        <div class="form-group">
+          <label>Rating</label>
+          <div class="star-select-row" id="starSelector">
+            <span class="star active" onclick="setStars(1)">★</span>
+            <span class="star active" onclick="setStars(2)">★</span>
+            <span class="star active" onclick="setStars(3)">★</span>
+            <span class="star active" onclick="setStars(4)">★</span>
+            <span class="star active" onclick="setStars(5)">★</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Testimonial</label>
+          <textarea class="form-control" rows="3" placeholder="How did the design help your product or team?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+          Submit Endorsement ✨
+        </button>
+      </form>
+</div>
+  </div>
+ /* 1 cursor dom elements */
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing">
+      <span class="cursor-badge-text" id="cursorBadgeText"></span>
+    </div>
+  <!-- ==========================================================
+       VANILLA JAVASCRIPT
+       ========================================================== -->
+  <script>
+    // 1. Filter Reviews Logic
+    function filterReviews(category, btn) {
+      document.querySelectorAll('.filter-pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.review-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 2. Star Rating Selector in Review Modal
+    let selectedRating = 5;
+    function setStars(count) {
+      selectedRating = count;
+      const stars = document.querySelectorAll('#starSelector .star');
+      stars.forEach((star, idx) => {
+        if (idx < count) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    // 3. Modals Management
+    function openContactModal() {
+      document.getElementById('contactModal').classList.add('active');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+
+    function openReviewModal() {
+      document.getElementById('reviewModal').classList.add('active');
+    }
+
+    function closeReviewModal() {
+      document.getElementById('reviewModal').classList.remove('active');
+    }
+
+    // Close modals on clicking outer backdrop
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
+        }
+      });
+    });
+
+    // 4. Form Handlers with interactive feedback
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerText;
+      btn.innerText = 'Message Sent! ✨';
+      btn.style.background = '#38B294';
+
+      setTimeout(() => {
+        closeContactModal();
+        e.target.reset();
+        btn.innerText = original;
+        btn.style.background = '';
+      }, 1400);
+    }
+
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerText;
+      btn.innerText = 'Thank You So Much! ❤️';
+      btn.style.background = '#FF6E65';
+
+      setTimeout(() => {
+        closeReviewModal();
+        e.target.reset();
+        btn.innerText = original;
+        btn.style.background = '';
+      }, 1400);
+    }
+  </script>
+<script>
+    // 3 cursor physics & event script
+
+      (function initCustomCursor() {
+        // disable on touch screens (smartphones/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          return
+        }
+
+        const dot = document.querySelector('#cursorDot')
+        const ring = document.querySelector('#cursorRing')
+        const badgeText = document.querySelector('cursorBadgeText')
+
+        if (!dot || !ring) {
+          return
+        }
+
+
+        //add class to body to suppress default browser cursor
+        document.body.classList.add('has-custom-cursor')
+
+        // coordinates
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let isVisible = false;
+
+
+        // linear interpolation for smooth trailing lag
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        
+        //track mouse position
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // immediate position update for center dot
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+
+          if (!isVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isVisible = true;
+          }
+        });
+
+
+        // raf physics loop for the outer ring
+        function render() {
+          // 0.18 gives a soft, silk trailing spring feel
+          ringX = lerp(ringX, mouseX, 0.18);
+          ringY = lerp(ringY, mouseY, 0.18);
+
+          ring.style.left = `${ringX.toFixed(2)}px`;
+          ring.style.top = `${ringY.toFixed(2)}px`;
+
+          requestAnimationFrame(render);
+        }
+          requestAnimationFrame(render)
+
+
+          // hide cursor when cursor exits the browser window
+          document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0'
+            ring.style.opacity = '0';
+            isVisible = false;
+          });
+
+
+          // click effect (squish & spawn kawaii particles)
+          window.addEventListener('mousedown', (e) => {
+           ring.classList.add('is-clicking');
+           spawnParticles(e.clientX, e.clientY);
+          });
+
+
+          window.addEventListener('mouseup', () => {
+            ring.classList.remove('is-clicking')
+          });
+
+
+          // particle burst genrator
+          const particles = ['💖','✨','💕','⭐'];
+          function spawnParticles(x,y) {
+            const count = 3;
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('span');
+              particle.className = 'cursor-particle';
+              particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+
+
+              // random trajectories
+              const vx = (Math.random() - 0.5) * 80 + 'px';
+              const vy = -Math.random() * 60 - 20 + 'px'; // float upwards
+              const rot = (Math.random() - 0.5) * 60 + 'deg';
+              const size = Math.floor(Math.random() * 8) + 14 + 'px';
+
+              particle.style.left = `${x}px`;
+              particle.style.top = `${y}px`;
+              particle.style.fontSize = size;
+              particle.style.setProperty('--vx', vx);
+              particle.style.setProperty('--vy', vy);
+              particle.style.setProperty('--rot', rot);
+
+
+              document.body.appendChild(particle);
+
+              setTimeout(() => particle.remove(), 750);
+            }
+          }
+
+
+          // contextual hover detection (event delegation)
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target;
+
+            // 1. text inputs & textareas
+            if (target.closest('input, textarea, select')) {
+              ring.classList.add('is-input');
+              return
+            }
+
+            // 2. custom badge targets (add data-cursor= "your text" to any element)
+            const badgeTarget = target.closest('[data-cursor]');
+
+            if (badgeTarget) {
+              const text = badgeTarget.getAttribute('data-cursor') || 'View ❤';
+              badgeText.innerText = text;
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return;
+            }
+
+            // auto-badge for project & case study cards
+            const caseCard = target.closest('.project-card, .testimonial-card');
+            if (caseCard) {
+              badgeText.innerText = 'View ❤';
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return
+            }
+
+            // 3. regular interactive elements (buttons, links, pills)
+            if (target.closest('a, button, .btn, .filter-btn, .social-btn, [role="button"]')) {
+              ring.classList.add('is-hovering');
+              dot.classList.add('is-hovering');
+            }
+          });
+
+          document.addEventListener('mouseout', (e) => {
+            const target = e.target;
+
+            if (target.closest('input, textarea, select')) {
+              ring.classList.remove('is-input');
+            }
+            if (target.closest('[data-cursor], .project-card, .testimonial-card')) {
+              ring.classList.remove('is-badge');
+              dot.classList.remove('is-badge');
+            }
+
+            if (target.closest('a, button, .btn, .filter-btn, .tab-btn, .social-btn, [role="button"]')) {
+              ring.classList.remove('is-hovering');
+              dot.classList.remove('is-hovering');
+            }
+          });
+      })();
+  </script>
+</body>
+</html>
+

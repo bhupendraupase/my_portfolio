@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions — Bhupendra | Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI + Caveat for handwritten notes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       1. HEADER & NAVIGATION
+       ========================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+
+      <button class="btn btn-primary" onclick="openContactModal()">
+        Let's Talk <span style="font-size:1.1em">✨</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       2. HERO SECTION & INSTANT LIVE SEARCH
+       ========================================================== -->
+  <section class="faq-hero">
+    <div class="container">
+      <span class="hero-sparkle">Got Questions? ♡</span>
+      <h1>Everything you need to know before we <span>collaborate</span></h1>
+      <p>Clear answers regarding my design process, developer handoffs, sprint turnaround times, pricing frameworks, and post-launch support.</p>
+
+      <!-- Realtime Search Input -->
+      <div class="faq-search-wrapper">
+        <input 
+          type="text" 
+          id="faqSearchInput" 
+          class="faq-search-input" 
+          placeholder="Search questions (e.g. 'handoff', 'pricing', 'NDA', 'timeline')..." 
+          oninput="handleFaqSearch()"
+        />
+        <svg class="search-icon-svg" viewBox="0 0 24 24">
+          <path d="M10 2a8 8 0 015.293 14.001l4.853 4.853a1 1 0 01-1.414 1.414l-4.853-4.853A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/>
+        </svg>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills">
+        <button class="cat-btn active" onclick="filterCategory('all', this)">All Questions</button>
+        <button class="cat-btn" onclick="filterCategory('process', this)">⚡ Process & Sprints</button>
+        <button class="cat-btn" onclick="filterCategory('pricing', this)">💳 Pricing & Contracts</button>
+        <button class="cat-btn" onclick="filterCategory('handoff', this)">💻 Dev Handoff & Specs</button>
+        <button class="cat-btn" onclick="filterCategory('general', this)">✨ Getting Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. CATEGORIZED ACCORDIONS
+       ========================================================== -->
+  <section class="faq-main-section">
+    <div class="container">
+
+      <!-- CATEGORY 1: PROCESS & SPRINTS -->
+      <div class="category-group" data-cat="process">
+        <div class="category-title">
+          <span class="group-badge bg-mint-tag">⚡</span> Process & Sprints
+        </div>
+
+        <!-- Q1 (Open by default) -->
+        <div class="faq-card open" data-keywords="timeline turn around sprint speed mvp weeks">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>What is your typical turnaround timeline for a mobile app or web platform?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                Turnaround depends on the scope of your product, but here are typical industry benchmarks I operate with:
+                <ul>
+                  <li><strong>Targeted 2-Week Design Sprint:</strong> Ideal for redesigning an onboarding funnel, a checkout flow, or a clickable investor MVP pitch deck.</li>
+                  <li><strong>Standard Mobile App (10–18 screens):</strong> Approximately 4 to 6 weeks from kickoff discovery to final developer token handoff.</li>
+                  <li><strong>Full B2B SaaS Platform or Multi-Platform Ecosystem:</strong> Typically 7 to 10 weeks, encompassing user journeys, component libraries, and interactive prototypes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-card" data-keywords="revisions feedback changes iterations design review">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>How do revisions and feedback loops work? What if we don't love the first draft?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                I mitigate the risk of surprises by breaking projects into milestone checkpoints: 
+                <br/><br/>
+                First, we align on wireframes and information architecture. Next, I share 2 distinct moodboard directions for visual styling. Only after you approve the aesthetic foundation do we proceed to full high-fidelity screen design. All fixed packages include <strong>2 structured rounds of revisions per milestone</strong>, plus lightweight real-time feedback via Figma comments.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-card" data-keywords="tools software figma framer protopie miro notion">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>Which design and collaboration software do you use?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                My primary workspace is <strong>Figma</strong> (using modern auto-layout, nested component properties, and token variables). For micro-interactions and complex logic prototypes, I leverage <strong>ProtoPie</strong> and <strong>Framer</strong>. For user research, roadmapping, and async updates, I use <strong>Miro, Notion, Maze, and Loom</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 2: DEV HANDOFF & TECHNICAL SPECS -->
+      <div class="category-group" data-cat="handoff">
+        <div class="category-title">
+          <span class="group-badge bg-purple-tag">💻</span> Dev Handoff & Engineering
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-card" data-keywords="handoff developer code engineer tokens specs figma variable">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>How do you prepare design files for developers?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                I take pride in delivering developer-ready files that engineers genuinely appreciate. Every deliverable includes:
+                <ul>
+                  <li><strong>Semantic Design Tokens:</strong> Spacing (8pt grid), color roles (surface, primary, on-brand), typography scales, and radius variables.</li>
+                  <li><strong>Edge & Error States:</strong> Empty views, loading skeletons, modal timeouts, and character validation errors.</li>
+                  <li><strong>Exportable Assets:</strong> Clean, optimized SVGs with unified viewboxes and WebP assets.</li>
+                  <li><strong>Live Walkthrough:</strong> A 45-minute handoff call with your tech leads to review interaction behavior and answer questions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-card" data-keywords="code html css react frontend develop build">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>Do you write front-end code (HTML, CSS, React)?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                My primary role is product architecture and UI/UX design. However, having a solid background in modern semantic HTML, CSS Grid/Flexbox, and responsive ergonomics means I design with <strong>100% technical feasibility in mind</strong>. Your developers will never receive unrealistic layouts or unbuildable motion curves.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-card" data-keywords="post launch qa support bugs review staging test">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>Do you offer post-launch design QA support?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                Yes! Every project includes <strong>14 days of complimentary Design QA support</strong> after handoff. I will audit your staging/test environments, verify margins, font rendering, and micro-interactions, and log any visual discrepancies directly in your team’s Jira, GitHub, or Linear queue.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 3: PRICING, PAYMENTS & CONTRACTS -->
+      <div class="category-group" data-cat="pricing">
+        <div class="category-title">
+          <span class="group-badge bg-coral-tag">💳</span> Pricing & Contracts
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-card" data-keywords="pricing cost estimate payment deposit milestone invoice">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>How are project payments structured?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                For fixed-scope projects, payments are typically split into milestones: <strong>50% upfront deposit</strong> upon contract execution to reserve queue capacity, and <strong>50% upon final prototype & token handoff</strong> (or 40/30/30 for enterprise scopes). 
+                <br/><br/>
+                For monthly retainer contracts, billing is handled at the beginning of each 30-day billing cycle. Invoices can be paid in USD, EUR, GBP, or INR via Stripe, Wise, or Direct Wire.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-card" data-keywords="hourly fixed price sprint scope budget">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>Do you work on an hourly basis or fixed price?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                I strongly prefer <strong>value-driven, fixed-price contracts or dedicated sprints</strong>. Fixed pricing provides total budget certainty for your team and aligns our incentives around shipping exceptional quality rather than running up hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 4: GENERAL & GETTING STARTED -->
+      <div class="category-group" data-cat="general">
+        <div class="category-title">
+          <span class="group-badge bg-yellow-tag">✨</span> Getting Started
+        </div>
+
+        <!-- Q9 -->
+        <div class="faq-card" data-keywords="nda confidentiality privacy secret legal sign">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>Can we sign a Non-Disclosure Agreement (NDA) before sharing our product ideas?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                Absolutely. I routinely work with stealth startups, fintech platforms, and proprietary IP. I am happy to review and sign a mutual standard NDA before our initial discovery workshop.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="faq-card" data-keywords="timezone async location bangalore us europe communication">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>How do you handle time zone differences with international clients?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                I am based in <strong>Bangalore, India (IST)</strong>, but over 70% of my clients are located in North America, the UK, and Singapore. I maintain a daily 3-4 hour live working overlap with US Eastern, Pacific, and European morning hours for sync calls, backed by detailed async Loom video updates.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q11 -->
+        <div class="faq-card" data-keywords="kickoff start onboarding next steps schedule">
+          <button class="faq-trigger" onclick="toggleAccordion(this)">
+            <span>What are the next steps to kick off a project?</span>
+            <span class="faq-plus-icon">+</span>
+          </button>
+          <div class="faq-collapsible">
+            <div class="faq-inner-content">
+              <div class="faq-answer-body">
+                Getting started is simple:
+                <ul>
+                  <li><strong>Step 1:</strong> Click <em>"Let's Talk"</em> to send a brief message with your timeline and goals.</li>
+                  <li><strong>Step 2:</strong> We host a quick 20-minute video discovery call to align on expectations and budget.</li>
+                  <li><strong>Step 3:</strong> I send a clear scope proposal & agreement. Once confirmed, we launch our Figma workspace within 3 business days!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPTY SEARCH RESULT NOTICE -->
+      <div id="emptySearchState" class="empty-search-state">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">🔍</div>
+        <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-title); margin-bottom: 6px;">
+          No matching answers found
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+          Have a specific question not covered here? Feel free to ask me directly!
+        </p>
+        <button class="btn btn-coral" onclick="openContactModal()">
+          Ask Ananya Directly ✨
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. KAWAII STILL HAVE QUESTIONS HELP CARD
+       ========================================================== -->
+  <div class="container">
+    <div class="quick-help-banner">
+      
+      <div class="help-plant-visual">
+        <svg class="help-plant-svg" viewBox="0 0 160 170" fill="none">
+          <path d="M55 70C40 30 15 45 35 85C45 105 60 85 55 70Z" fill="#71D5BC" />
+          <path d="M105 70C120 30 145 45 125 85C115 105 100 85 105 70Z" fill="#71D5BC" />
+          <path d="M80 60C70 20 90 20 80 60Z" fill="#38B294"/>
+          <path d="M40 85H120L112 145C111 152 105 157 98 157H62C55 157 49 152 48 145L40 85Z" fill="#D2F2E7" stroke="#38B294" stroke-width="3"/>
+          <rect x="34" y="78" width="92" height="12" rx="6" fill="#A4E6D2" stroke="#38B294" stroke-width="3"/>
+          <ellipse cx="66" cy="118" rx="4.5" ry="5.5" fill="#1E3A32" />
+          <ellipse cx="94" cy="118" rx="4.5" ry="5.5" fill="#1E3A32" />
+          <circle cx="67.5" cy="116" r="1.5" fill="white" />
+          <circle cx="95.5" cy="116" r="1.5" fill="white" />
+          <ellipse cx="56" cy="124" rx="6" ry="3.5" fill="#FFB3AE" opacity="0.8" />
+          <ellipse cx="104" cy="124" rx="6" ry="3.5" fill="#FFB3AE" opacity="0.8" />
+          <path d="M74 125C76 129 84 129 86 125" stroke="#1E3A32" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="help-note">"I don't bite, say hi!" <span class="doodle-heart">♡</span></div>
+      </div>
+
+      <div class="help-content">
+        <h3>Still have questions or a custom RFP?</h3>
+        <p>
+          Every digital product has unique intricacies. If your question isn't answered above, let's schedule a friendly 15-minute video intro to discuss your goals with zero pressure.
+        </p>
+        <div class="help-buttons-row">
+          <button class="btn btn-primary" onclick="openContactModal()">
+            Send Quick Note 💬
+          </button>
+          <a href="mailto:bhupendraupase@gmail.com" class="btn btn-outline">
+            ✉️ Email Me Directly
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       5. BOTTOM CTA BANNER (Direct Reference Match)
+       ========================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-box">
+        
+        <div class="cta-left">
+          <div class="cta-envelope-icon">
+            💌
+          </div>
+          <div class="cta-headings">
+            <h2>Let's create something<br/>amazing together! <span class="doodle-heart">♡</span></h2>
+            <p>Have a project in mind or want to talk design specs? I'd love to hear from you.</p>
+          </div>
+        </div>
+
+        <div class="cta-contact-details">
+          <div class="contact-item">
+            <span>✉️</span> bhupendraupase@gmail.com
+          </div>
+          <div class="contact-item">
+            <span>📞</span> +918319458273
+          </div>
+          <div class="contact-item">
+            <span>📍</span> Bhopal, India
+          </div>
+        </div>
+
+        <button class="btn btn-coral" onclick="openContactModal()">
+          Let's Talk ✨
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       6. FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="brand-logo">
+        <span class="logo-title">Bhupendra Upase
+          <!-- <span class="doodle-heart">♡</span> -->
+        </span>
+        <span class="logo-sub">Web Developer</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#behance" class="social-btn" title="Behance">Bē</a>
+        <a href="#linkedin" class="social-btn" title="LinkedIn">in</a>
+        <a href="#instagram" class="social-btn" title="Instagram">ig</a>
+        <a href="#dribbble" class="social-btn" title="Dribbble">🏀</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Bhupendra Upase. Handcrafted with love & clean CSS.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       7. CONTACT / INQUIRY MODAL
+       ========================================================== -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContactModal()">&times;</button>
+      
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--text-title); margin-bottom:6px;">
+        Ask a Question <span class="doodle-heart">♡</span>
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+        I typically respond to inquiries within 24 hours.
+      </p>
+
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Maya Patel" required>
+        </div>
+
+       <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="maya@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Your Question or Scope</label>
+          <textarea class="form-control" rows="3" placeholder="What would you like to know?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-coral" style="width: 100%; margin-top: 8px;">
+          Send Message 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+   /* 1 cursor dom elements */
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing">
+      <span class="cursor-badge-text" id="cursorBadgeText"></span>
+    </div>
+  <!-- ==========================================================
+       VANILLA JAVASCRIPT
+       ========================================================== -->
+  <script>
+    // 1. Accordion Toggle Logic
+    function toggleAccordion(triggerBtn) {
+      const card = triggerBtn.closest('.faq-card');
+      const isOpen = card.classList.contains('open');
+
+      // Toggle current card
+      if (isOpen) {
+        card.classList.remove('open');
+      } else {
+        card.classList.add('open');
+      }
+    }
+
+    // 2. Category Tab Filter Logic
+    let currentCategory = 'all';
+
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+
+      // Update active button state
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      applyFilters();
+    }
+
+    // 3. Live Search Logic
+    function handleFaqSearch() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('faqSearchInput').value.toLowerCase().trim();
+      const groups = document.querySelectorAll('.category-group');
+      let visibleCount = 0;
+
+      groups.forEach(group => {
+        const groupCat = group.getAttribute('data-cat');
+        const cards = group.querySelectorAll('.faq-card');
+        let groupVisibleCards = 0;
+
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const keywords = card.getAttribute('data-keywords') || '';
+          const matchesCategory = (currentCategory === 'all' || groupCat === currentCategory);
+          const matchesSearch = (!query || text.includes(query) || keywords.includes(query));
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'block';
+            groupVisibleCards++;
+            visibleCount++;
+            
+            // Auto open cards that specifically match an active search query
+            if (query.length > 2) {
+              card.classList.add('open');
+            }
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide entire group heading if no cards match
+        if (groupVisibleCards > 0) {
+          group.style.display = 'block';
+        } else {
+          group.style.display = 'none';
+        }
+      });
+
+      // Show/Hide Empty state
+      const emptyState = document.getElementById('emptySearchState');
+      if (visibleCount === 0) {
+        emptyState.classList.add('visible');
+      } else {
+        emptyState.classList.remove('visible');
+      }
+    }
+
+    // 4. Modal Controls
+    function openContactModal() {
+      document.getElementById('contactModal').classList.add('active');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+
+    // Dismiss modal on backdrop click
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeContactModal();
+      }
+    });
+
+    // Handle Form Submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerText;
+      btn.innerText = 'Question Sent! ✨';
+      btn.style.background = '#38B294';
+
+      setTimeout(() => {
+        closeContactModal();
+        e.target.reset();
+        btn.innerText = original;
+        btn.style.background = '';
+      }, 1400);
+    }
+  </script>
+<script>
+    // 3 cursor physics & event script
+
+      (function initCustomCursor() {
+        // disable on touch screens (smartphones/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          return
+        }
+
+        const dot = document.querySelector('#cursorDot')
+        const ring = document.querySelector('#cursorRing')
+        const badgeText = document.querySelector('cursorBadgeText')
+
+        if (!dot || !ring) {
+          return
+        }
+
+
+        //add class to body to suppress default browser cursor
+        document.body.classList.add('has-custom-cursor')
+
+        // coordinates
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let isVisible = false;
+
+
+        // linear interpolation for smooth trailing lag
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        
+        //track mouse position
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // immediate position update for center dot
+          dot.style.left = `${mouseX}px`;
+          dot.style.top = `${mouseY}px`;
+
+          if (!isVisible) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isVisible = true;
+          }
+        });
+
+
+        // raf physics loop for the outer ring
+        function render() {
+          // 0.18 gives a soft, silk trailing spring feel
+          ringX = lerp(ringX, mouseX, 0.18);
+          ringY = lerp(ringY, mouseY, 0.18);
+
+          ring.style.left = `${ringX.toFixed(2)}px`;
+          ring.style.top = `${ringY.toFixed(2)}px`;
+
+          requestAnimationFrame(render);
+        }
+          requestAnimationFrame(render)
+
+
+          // hide cursor when cursor exits the browser window
+          document.addEventListener('mouseleave', () => {
+            dot.style.opacity = '0'
+            ring.style.opacity = '0';
+            isVisible = false;
+          });
+
+
+          // click effect (squish & spawn kawaii particles)
+          window.addEventListener('mousedown', (e) => {
+           ring.classList.add('is-clicking');
+           spawnParticles(e.clientX, e.clientY);
+          });
+
+
+          window.addEventListener('mouseup', () => {
+            ring.classList.remove('is-clicking')
+          });
+
+
+          // particle burst genrator
+          const particles = ['💖','✨','💕','⭐'];
+          function spawnParticles(x,y) {
+            const count = 3;
+            for (let i = 0; i < count; i++) {
+              const particle = document.createElement('span');
+              particle.className = 'cursor-particle';
+              particle.innerText = particles[Math.floor(Math.random() * particles.length)];
+
+
+              // random trajectories
+              const vx = (Math.random() - 0.5) * 80 + 'px';
+              const vy = -Math.random() * 60 - 20 + 'px'; // float upwards
+              const rot = (Math.random() - 0.5) * 60 + 'deg';
+              const size = Math.floor(Math.random() * 8) + 14 + 'px';
+
+              particle.style.left = `${x}px`;
+              particle.style.top = `${y}px`;
+              particle.style.fontSize = size;
+              particle.style.setProperty('--vx', vx);
+              particle.style.setProperty('--vy', vy);
+              particle.style.setProperty('--rot', rot);
+
+
+              document.body.appendChild(particle);
+
+              setTimeout(() => particle.remove(), 750);
+            }
+          }
+
+
+          // contextual hover detection (event delegation)
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target;
+
+            // 1. text inputs & textareas
+            if (target.closest('input, textarea, select')) {
+              ring.classList.add('is-input');
+              return
+            }
+
+            // 2. custom badge targets (add data-cursor= "your text" to any element)
+            const badgeTarget = target.closest('[data-cursor]');
+
+            if (badgeTarget) {
+              const text = badgeTarget.getAttribute('data-cursor') || 'View ❤';
+              badgeText.innerText = text;
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return;
+            }
+
+            // auto-badge for project & case study cards
+            const caseCard = target.closest('.project-card, .testimonial-card');
+            if (caseCard) {
+              badgeText.innerText = 'View ❤';
+              ring.classList.add('is-badge');
+              dot.classList.add('is-badge');
+              return
+            }
+
+            // 3. regular interactive elements (buttons, links, pills)
+            if (target.closest('a, button, .btn, .filter-btn, .social-btn, [role="button"]')) {
+              ring.classList.add('is-hovering');
+              dot.classList.add('is-hovering');
+            }
+          });
+
+          document.addEventListener('mouseout', (e) => {
+            const target = e.target;
+
+            if (target.closest('input, textarea, select')) {
+              ring.classList.remove('is-input');
+            }
+            if (target.closest('[data-cursor], .project-card, .testimonial-card')) {
+              ring.classList.remove('is-badge');
+              dot.classList.remove('is-badge');
+            }
+
+            if (target.closest('a, button, .btn, .filter-btn, .tab-btn, .social-btn, [role="button"]')) {
+              ring.classList.remove('is-hovering');
+              dot.classList.remove('is-hovering');
+            }
+          });
+      })();
+  </script>
+</body>
+</html>
