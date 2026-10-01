@@ -146,13 +146,15 @@
       .nav-links a {
         font-size: 0.92rem;
         font-weight: 500;
-        color: var(--text-slate);
+        color: black;
+        /* color: var(--text-slate); */
         position: relative;
       }
 
       .nav-links a:hover,
       .nav-links a.active {
-        color: var(--primary-mint);
+        color: #065642;
+        /* color: var(--primary-mint); */
       }
 
       .nav-links a.active::after {
@@ -172,7 +174,8 @@
         align-items: center;
         gap: 8px;
         background-color: var(--primary-mint);
-        color: white !important;
+        color: black !important;
+        /* color: white !important; */
         padding: 10px 24px;
         border-radius: var(--radius-full);
         font-weight: 600;
@@ -188,7 +191,8 @@
         align-items: center;
         gap: 8px;
         background-color: var(--accent-coral);
-        color: white !important;
+        color: black !important;
+        /* color: white !important; */
         padding: 12px 28px;
         border-radius: var(--radius-full);
         font-weight: 600;
@@ -256,7 +260,8 @@
       .hero-greeting {
         font-size: 1.15rem;
         font-weight: 600;
-        color: var(--primary-mint);
+        /* color: var(--primary-mint); */
+        color: #065642;
         display: flex;
         align-items: center;
         gap: 6px;
@@ -273,7 +278,8 @@
       }
 
       .hero-name span {
-        color: var(--primary-mint);
+        /* color: var(--primary-mint); */
+        color: #065642;
         position: relative;
         display: inline-block;
       }
@@ -467,11 +473,13 @@
       }
 
        .section-title .mint-highlight {
-        color: var(--primary-mint);
+        color: black;
+        /* color: var(--primary-mint); */
       } 
       
       .about-span {
-        color: var(--primary-mint);
+        color: #1D5D4B;
+        /* color: var(--primary-mint); */
       }
 
       .section-title .doodle-heart {
@@ -528,7 +536,8 @@
 
       .about-content p {
         font-size: 0.98rem;
-        color: var(--text-slate);
+        color: black;
+        /* color: var(--text-slate); */
         line-height: 1.75;
         margin-bottom: 24px;
       }
@@ -829,7 +838,8 @@
       .work-badge-category {
         font-size: 0.72rem;
         font-weight: 700;
-        color: var(--primary-mint);
+        /* color: var(--primary-mint); */
+        color: #065642;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin-bottom: 12px;
@@ -850,7 +860,8 @@
         gap: 6px;
         font-size: 0.86rem;
         font-weight: 700;
-        color: var(--accent-coral);
+        /* color: var(--accent-coral); */
+        color: black;
         cursor: pointer;
         transition: var(--transition-smooth);
         align-self: flex-start;
@@ -941,7 +952,8 @@
       .step-number {
         font-size: 0.78rem;
         font-weight: 800;
-        color: var(--accent-coral);
+        /* color: var(--accent-coral); */
+        color: #065642;
         letter-spacing: 0.05em;
         margin-bottom: 2px;
       }
@@ -1040,7 +1052,7 @@
       }
 
       .cta-banner {
-        background: #d9f2e7;
+        background: #ffffff;
         border-radius: 32px;
         padding: 40px 50px;
         display: grid;
@@ -1395,7 +1407,7 @@
 
       .testimonials-subtitle {
         font-size: 0.95rem;
-        color: #8492a6;
+        color: #4B5768;
       }
 
       /* carousel wrapper */
@@ -1653,7 +1665,7 @@
       /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -1686,10 +1698,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
@@ -2013,7 +2025,7 @@
     /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -2046,10 +2058,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
@@ -2228,7 +2240,7 @@
           /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -2261,10 +2273,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
@@ -2486,7 +2498,7 @@
         /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -2519,10 +2531,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
@@ -2802,7 +2814,7 @@
           /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -2835,10 +2847,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
@@ -3098,7 +3110,7 @@
        /* ==========================================================
        CSS VARIABLES & DESIGN TOKENS
        ========================================================== */
-    :root {
+    /* :root {
       --primary: #38B294;
       --primary-hover: #2d947b;
       --primary-light: #EBF8F4;
@@ -3132,10 +3144,10 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      /* --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; */
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-main: 'Caveat', cursive, sans-serif;
       --font-hand: 'Caveat', cursive, sans-serif;
-    }
+    } */
 
     /* ==========================================================
        GLOBAL RESETS & BASE STYLES
